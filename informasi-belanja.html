@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informasi Produk - Aloshop Style</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hover Zoom Animation */
+        .product-image {
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Button Hover Animation */
+        .btn-hover {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-hover:hover {
+            background-color: #1da78e;
+            transform: scale(1.05);
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in.loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
 
     <!-- Navbar -->
-    <nav class="bg-[#2dd8a3] text-white shadow-md">
+    <nav class="bg-[#2dd8a3] text-white">
         <div class="w-11/12 md:w-3/4 lg:w-3/4 mx-auto flex items-center justify-between p-4">
             <a href="#" class="text-2xl font-semibold">Aloshop</a>
             <div class="space-x-4">
@@ -25,17 +52,17 @@
 
     <div class="w-11/12 md:w-3/4 lg:w-3/4 mx-auto p-6">
         <!-- Kontainer Produk Utama -->
-        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <div class="bg-white rounded-lg p-6 mb-6 fade-in" id="main-product">
             <div class="flex flex-col md:flex-row">
                 <!-- Gambar Produk Utama -->
                 <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                    <img class="w-full h-auto rounded-lg" src="https://via.placeholder.com/600x400" alt="Product Image">
+                    <img class="w-full h-auto rounded-lg product-image" src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Degirol 0,25 mg">
                 </div>
                 <!-- Detail Produk Utama -->
                 <div class="w-full md:w-2/3 md:pl-8">
-                    <h1 class="text-3xl font-semibold text-gray-800 mb-4">Nama Produk Utama</h1>
+                    <h1 class="text-3xl font-semibold text-gray-800 mb-4">Degirol 0,25 mg</h1>
                     <p class="text-lg text-gray-600 leading-relaxed mb-4">
-                        Deskripsi singkat tentang produk ini. Jelaskan manfaat, fitur, atau informasi penting lainnya dengan singkat dan jelas untuk memudahkan pembeli.
+                        Degirol adalah obat yang digunakan untuk mengobati berbagai kondisi. Jelaskan manfaat, fitur, atau informasi penting lainnya dengan singkat dan jelas untuk memudahkan pembeli.
                     </p>
                     <div class="flex items-center mb-4">
                         <span class="text-2xl font-bold text-[#2dd8a3]">Rp 150.000</span>
@@ -47,17 +74,17 @@
                             Pilih Ukuran:
                         </label>
                         <select id="size" class="block w-full border border-gray-300 rounded p-2">
-                            <option>100 ml</option>
-                            <option>200 ml</option>
-                            <option>300 ml</option>
+                            <option>10 Tablet</option>
+                            <option>20 Tablet</option>
+                            <option>30 Tablet</option>
                         </select>
                     </div>
                     <!-- Tombol Aksi -->
                     <div class="flex items-center space-x-4">
-                        <button class="bg-[#2dd8a3] text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#1da78e]">
+                        <button class="bg-[#2dd8a3] text-white font-semibold py-2 px-6 rounded-lg btn-hover">
                             Beli Sekarang
                         </button>
-                        <button class="text-[#2dd8a3] font-semibold py-2 px-6 border border-[#2dd8a3] rounded-lg hover:bg-[#d1f7f2]">
+                        <button class="text-[#2dd8a3] font-semibold py-2 px-6 border border-[#2dd8a3] rounded-lg btn-hover">
                             Tambahkan ke Keranjang
                         </button>
                     </div>
@@ -66,12 +93,12 @@
         </div>
 
         <!-- Produk Lainnya -->
-        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <div class="bg-white rounded-lg p-6 mb-6">
             <h2 class="text-2xl font-semibold text-gray-800 mb-4">Produk Lainnya</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <!-- Produk 1 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Product Image">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden fade-in">
+                    <img class="w-full h-48 object-cover rounded-t-lg product-image" src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol" alt="Product Image">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
                         <p class="text-gray-600 text-base leading-relaxed mb-2">
@@ -79,15 +106,15 @@
                         </p>
                         <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
                         <div class="flex items-center mt-4">
-                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded hover:bg-[#1da78e]">
+                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded btn-hover">
                                 Beli Sekarang
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Produk 2 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Product Image">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden fade-in">
+                    <img class="w-full h-48 object-cover rounded-t-lg product-image" src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol" alt="Product Image">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Produk 2</h3>
                         <p class="text-gray-600 text-base leading-relaxed mb-2">
@@ -95,15 +122,15 @@
                         </p>
                         <span class="text-lg font-bold text-[#2dd8a3]">Rp 120.000</span>
                         <div class="flex items-center mt-4">
-                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded hover:bg-[#1da78e]">
+                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded btn-hover">
                                 Beli Sekarang
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Produk 3 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Product Image">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden fade-in">
+                    <img class="w-full h-48 object-cover rounded-t-lg product-image" src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol" alt="Product Image">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Produk 3</h3>
                         <p class="text-gray-600 text-base leading-relaxed mb-2">
@@ -111,15 +138,15 @@
                         </p>
                         <span class="text-lg font-bold text-[#2dd8a3]">Rp 140.000</span>
                         <div class="flex items-center mt-4">
-                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded hover:bg-[#1da78e]">
+                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded btn-hover">
                                 Beli Sekarang
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Produk 4 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Product Image">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden fade-in">
+                    <img class="w-full h-48 object-cover rounded-t-lg product-image" src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol" alt="Product Image">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Produk 4</h3>
                         <p class="text-gray-600 text-base leading-relaxed mb-2">
@@ -127,15 +154,15 @@
                         </p>
                         <span class="text-lg font-bold text-[#2dd8a3]">Rp 160.000</span>
                         <div class="flex items-center mt-4">
-                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded hover:bg-[#1da78e]">
+                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded btn-hover">
                                 Beli Sekarang
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Produk 5 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Product Image">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden fade-in">
+                    <img class="w-full h-48 object-cover rounded-t-lg product-image" src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol" alt="Product Image">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Produk 5</h3>
                         <p class="text-gray-600 text-base leading-relaxed mb-2">
@@ -143,15 +170,15 @@
                         </p>
                         <span class="text-lg font-bold text-[#2dd8a3]">Rp 180.000</span>
                         <div class="flex items-center mt-4">
-                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded hover:bg-[#1da78e]">
+                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded btn-hover">
                                 Beli Sekarang
                             </button>
                         </div>
                     </div>
                 </div>
                 <!-- Produk 6 -->
-                <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Product Image">
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden fade-in">
+                    <img class="w-full h-48 object-cover rounded-t-lg product-image" src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol" alt="Product Image">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Nama Produk 6</h3>
                         <p class="text-gray-600 text-base leading-relaxed mb-2">
@@ -159,7 +186,7 @@
                         </p>
                         <span class="text-lg font-bold text-[#2dd8a3]">Rp 200.000</span>
                         <div class="flex items-center mt-4">
-                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded hover:bg-[#1da78e]">
+                            <button class="bg-[#2dd8a3] text-white text-sm font-semibold py-1 px-3 rounded btn-hover">
                                 Beli Sekarang
                             </button>
                         </div>
@@ -169,6 +196,16 @@
         </div>
 
     </div>
+
+    <script>
+        // Fade In Effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                el.classList.add('loaded');
+            });
+        });
+    </script>
 
 </body>
 
