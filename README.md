@@ -1,2 +1,0 @@
-# SehatGo
- Website Kesehatan
