@@ -10,29 +10,48 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+        .backgroundi{
+            background-image: url(Gambar/Daftar.png);
+            background-repeat: no-repeat;
+            width:100%;
+            height:100vh;
+        }
     </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
-
-    <div class="bg-white py-[90px]  px-[60px] rounded-[30px] shadow-lg w-[550px]">
-        <h2 class="text-2xl font-poppins text-gray-800 text-center mb-2">Verifikasi</h2>
-        <p class="text-sm text-gray-600 text-center mb-6">Masukan code yang telah dikirim ke nomor ponsel Anda.</p>
+    <div class="backgroundi">
+     <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Login</h2>
 
         <form>
             <div class="mb-4">
-                <label class="block  text-gray-700 text-sm font-bold mb-2" for="email"></label>
-                <input class="w-full bg-slate-200 mt-[20px] rounded-[10px] h-[50px] px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="email" type="email" placeholder="Masukan Code">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="email" type="email" placeholder="Enter your email">
             </div>
 
-            <button class="w-full mt-[20px] mb-8 rounded-lg bg-[#2DD8A3] text-white font-bold py-3 px-8 rounded hover:bg-[#25B78A] focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:ring-opacity-50" type="button">
-                Kirim
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="password" type="password" placeholder="Enter your password">
+            </div>
+
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center">
+                    <input id="remember_me" type="checkbox" class="h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300 rounded">
+                    <label for="remember_me" class="ml-2 block text-gray-800 text-sm">Remember me</label>
+                </div>
+                <a href="#" class="text-sm text-blue-500 hover:underline">Forgot password?</a>
+            </div>
+
+            <button class="w-full bg-[#2DD8A3] text-white font-bold py-2 px-4 rounded hover:bg-[#25B78A] focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:ring-opacity-50" type="button">
+                Sign In
             </button>
         </form>
 
-        <p class="text-sm text-gray-600 mt-4 text-center">
-            Dengan melanjutkan, Anda telah menyetujui <a href="#" class="text-blue-500 hover:underline">Syarat & Ketentuan</a> dan <a href="#" class="text-blue-500 hover:underline">kebijakan privasi</a> SehatGo.
+        <p class="text-sm text-center text-gray-600 mt-6">
+            Don’t have an account? <a href="#" class="text-blue-500 hover:underline">Sign up</a>
         </p>
-    </div>
+     </div>
+   </div> 
 
 </body>
 </html>
