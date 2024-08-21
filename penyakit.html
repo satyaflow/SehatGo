@@ -3,24 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penyakit A-Z</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 font-poppins">
-    <!-- Wrapper to control body width -->
-    <div class="w-3/5 mx-auto">
-        <!-- Header Section -->
-        <header class="bg-white shadow p-4">
-            <div class="container mx-auto">
-                <h1 class="text-3xl font-bold text-gray-800 text-center">Penyakit A-Z</h1>
-            </div>
-        </header>
+    <title>Document</title>
 
-        <!-- Alphabetical Navigation -->
-        <nav class="container mx-auto my-4">
-            <div class="flex flex-wrap justify-start space-x-3">
-                <!-- Row 1: A-X -->
-                <div class="flex flex-wrap justify-start items-center gap-4  mb-2">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .text-judul {
+            color: rgb(121, 121, 121);
+        }
+
+        .hijau {
+            background-color: #2DD8A3;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header class="pb-8 bg-white lg:pb-0">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between h-16 lg:h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" title="" class="flex">
+                        <img class="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
+                    </a>
+                </div>
+                <button type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+                    <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                    </svg>
+                    <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Features</a>
+                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Solutions</a>
+                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Resources</a>
+                    <a href="#" title="" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Pricing</a>
+                </div>
+
+                <a href="#" title="" class="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700" role="button">Get started now</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="w-full h-[18vh] hijau flex items-center justify-center">
+        <div class="w-[1140px] h-auto flex items-center justify-center gap-x-20">
+            <div class="w-[80%] flex items-center justify-between">
+                <input class="w-[110%] bg-white py-[18px] px-4 rounded-md" placeholder="Masukan Pesan">
+                <button class="w-[15%] h-[60px] rounded-r-lg bg-blue-600 hijau flex items-center justify-center">
+                    <p class="text-white text-base text-xl font-medium">Cari</p>
+                </button>
+            </div>            
+        </div>
+    </div>
+
+    <div class="w-full bg-[#F9F9F9] h-auto flex justify-center">
+        <div class="w-[65%] h-auto my-12 flex justify-center">
+            <div class="w-[60%] flex items-center justify-start flex-col gap-8">
+                <div class="flex flex-wrap justify-start items-center gap-4 mb-2">
+                    <!-- Navigasi A-Z -->
                     <a href="#A" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">A</a>
                     <a href="#B" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">B</a>
                     <a href="#C" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">C</a>
@@ -45,21 +90,49 @@
                     <a href="#V" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">V</a>
                     <a href="#W" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">W</a>
                     <a href="#X" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">X</a>
-                    <a href="#X" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">Y</a>
-                    <a href="#X" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">Z</a>
+                    <a href="#Y" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">Y</a>
+                    <a href="#Z" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">Z</a>
+                </div>
+
+                <h1 class="w-full text-[30px] justify-start flex items-start">Daftar Penyakit</h1>
+                
+                <div class="w-full text-[20px] ">
+
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                    <h1>ASMA</h1>
+                </div>
+
+            </div>
+
+            <div class="w-[30%] ">
+                <div class="w-auto px-10 flex justify-center items-start flex-col">      
+                    <div class="flex justify-center items-center flex-col gap-12">
+                        <img class="w-full h-[600px] object-cover rounded-md" src="Gambar/images.jpeg" alt="iklan cuy">
+                        <img class="w-full h-[600px] object-cover rounded-md" src="Gambar/images.jpeg" alt="iklan cuy">
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <!-- Content Section -->
-        <div class="container mx-auto">
-            <!-- Add more items here -->
         </div>
-
-        <!-- Footer -->
-        <footer class="bg-gray-200 text-center p-4 mt-8">
-            <p class="text-gray-600">&copy; 2024 Your Website. All rights reserved.</p>
-        </footer>
     </div>
+
 </body>
 </html>
