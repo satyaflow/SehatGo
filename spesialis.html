@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Dokter Spesialis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-header {
+            background-image: url('https://source.unsplash.com/1600x400/?health');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
+            <a href="#" class="text-2xl font-bold text-blue-600">HealthCare</a>
+            <ul class="flex flex-wrap space-x-4 mt-2 lg:mt-0">
+                <li><a href="#" class="text-gray-800 hover:text-blue-600">Home</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-blue-600">About</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-header text-white py-16 relative flex items-center justify-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative text-center px-4">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Temukan Dokter Spesialis</h1>
+            <p class="text-lg mb-6">Temukan dokter spesialis terbaik sesuai kebutuhan medis Anda.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-2">
+                <input type="text" placeholder="Cari dokter atau spesialisasi" class="w-full sm:max-w-md p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="bg-blue-600 text-white p-3 rounded-r-lg hover:bg-blue-700 transition duration-300">
+                    Cari
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-lg flex flex-col lg:flex-row">
+        <!-- Sidebar Filters -->
+        <aside class="lg:w-1/4 mb-6 lg:mb-0 lg:mr-6">
+            <h2 class="text-2xl font-semibold mb-4">Filter Berdasarkan</h2>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-2">Spesialisasi</h3>
+                <div class="flex flex-col space-y-2">
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Kardiologi</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Ortopedi</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Ginekologi</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Dermatologi</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Neurologi</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Pediatri</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Endokrinologi</button>
+                    <button class="bg-blue-600 text-white p-3 rounded-lg border border-blue-600 hover:bg-blue-700">Psikiatri</button>
+                    <!-- Tambahkan lebih banyak filter sesuai kebutuhan -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Search and Doctor List -->
+        <section class="lg:w-3/4">
+            <div class="mb-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <!-- Search Bar -->
+                <div class="flex-1 mb-4 lg:mb-0">
+                    <input type="text" placeholder="Cari dokter atau spesialisasi" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <!-- Location Filter -->
+                <div class="relative mb-4 lg:mb-0">
+                    <select class="block w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Pilih Lokasi</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="surabaya">Surabaya</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="medan">Medan</option>
+                        <option value="yogyakarta">Yogyakarta</option>
+                        <!-- Tambahkan lebih banyak lokasi sesuai kebutuhan -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Doctor List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card Dokter -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 border border-gray-200">
+                    <img src="https://via.placeholder.com/80" alt="Foto Dokter" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <h3 class="text-lg font-semibold">Dr. John Doe</h3>
+                        <p class="text-gray-600">Spesialis Kardiologi</p>
+                        <p class="mt-2 text-gray-500">Alamat Klinik: Jl. Contoh No.123</p>
+                        <a href="#" class="text-blue-600 hover:underline mt-2 inline-block">Lihat Profil</a>
+                    </div>
+                </div>
+
+                <!-- Tambahkan lebih banyak card dokter sesuai kebutuhan -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 HealthCare. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

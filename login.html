@@ -10,52 +10,54 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-image:url(Gambar/Daftar.png);
+            background-image: url(Gambar/Daftar.png);
             background-repeat: no-repeat;
             background-size: cover;
         }
-       
     </style>
-
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="gap-[340px] mt-[140px] flex ">
-     <div class="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Login</h2>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
 
-        <form>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
-                <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="email" type="email" placeholder="Enter your email">
-            </div>
+    <!-- Wrapper for the login and image -->
+    <div class="flex flex-col md:flex-row items-center w-full max-w-6xl mx-auto">
+        <!-- Login Form -->
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-96 md:mr-8 mb-8 md:mb-0">
+            <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Login</h2>
 
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
-                <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="password" type="password" placeholder="Enter your password">
-            </div>
-
-            <div class="flex items-center justify-between mb-6">
-                <div class="flex items-center">
-                    <input id="remember_me" type="checkbox" class="h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300 rounded">
-                    <label for="remember_me" class="ml-2 block text-gray-800 text-sm">Remember me</label>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="email" type="email" placeholder="Enter your email">
                 </div>
-                <a href="#" class="text-sm text-blue-500 hover:underline">Forgot password?</a>
-            </div>
 
-            <button class="w-full bg-[#2DD8A3] text-white font-bold py-2 px-4 rounded hover:bg-[#25B78A] focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:ring-opacity-50" type="button">
-                Sign In
-            </button>
-        </form>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500" id="password" type="password" placeholder="Enter your password">
+                </div>
 
-        <p class="text-sm text-center text-gray-600 mt-6">
-            Don’t have an account? <a href="#" class="text-blue-500 hover:underline">Sign up</a>
-        </p>
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <input id="remember_me" type="checkbox" class="h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300 rounded">
+                        <label for="remember_me" class="ml-2 block text-gray-800 text-sm">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-500 hover:underline">Forgot password?</a>
+                </div>
 
-     </div>
+                <button class="w-full bg-[#2DD8A3] text-white font-bold py-2 px-4 rounded hover:bg-[#25B78A] focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:ring-opacity-50" type="button">
+                    Sign In
+                </button>
+            </form>
 
-     <div class="w-[450px] "> <img src="Gambar/lari.png"> </div>
-    </div> 
+            <p class="text-sm text-center text-gray-600 mt-6">
+                Don’t have an account? <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+            </p>
+        </div>
 
+        <!-- Image -->
+        <div class="w-full md:w-[450px]">
+            <img src="Gambar/lari.png" alt="Illustration" class="w-full h-auto object-cover">
+        </div>
+    </div>
 
 </body>
 </html>
