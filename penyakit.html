@@ -17,7 +17,6 @@
             background-color: #2DD8A3;
         }
     </style>
-
 </head>
 <body>
     
@@ -50,20 +49,23 @@
         </div>
     </header>
 
+    <!-- Bagian hijau dengan input pencarian -->
     <div class="w-full h-[18vh] hijau flex items-center justify-center">
-        <div class="w-[1140px] h-auto flex items-center justify-center gap-x-20">
-            <div class="w-[80%] flex items-center justify-between">
-                <input class="w-[110%] bg-white py-[18px] px-4 rounded-md" placeholder="Masukan Pesan">
-                <button class="w-[15%] h-[60px] rounded-r-lg bg-blue-600 hijau flex items-center justify-center">
-                    <p class="text-white text-base text-xl font-medium">Cari</p>
+        <div class="w-[90%] lg:w-[1140px] h-auto flex items-center justify-center gap-x-4 lg:gap-x-20">
+            <div class="w-full flex items-center justify-between">
+                <input class="w-[80%] lg:w-[85%] bg-white py-[12px] lg:py-[18px] px-4 rounded-l-md" placeholder="Masukan Pesan">
+                <button class="w-[20%] lg:w-[15%] h-[50px] lg:h-[60px] rounded-r-md bg-blue-600 flex items-center justify-center">
+                    <p class="text-white text-base text-lg lg:text-xl font-medium">Cari</p>
                 </button>
             </div>            
         </div>
     </div>
 
+    <!-- Bagian konten -->
     <div class="w-full bg-[#F9F9F9] h-auto flex justify-center">
-        <div class="w-[65%] h-auto my-12 flex justify-center">
-            <div class="w-[60%] flex items-center justify-start flex-col gap-8">
+        <div class="w-[90%] lg:w-[65%] h-auto my-12 flex flex-col lg:flex-row justify-between gap-8">
+            <!-- Bagian kiri -->
+            <div class="w-full lg:w-[60%] flex items-center justify-start flex-col gap-8">
                 <div class="flex flex-wrap justify-start items-center gap-4 mb-2">
                     <!-- Navigasi A-Z -->
                     <a href="#A" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">A</a>
@@ -94,41 +96,32 @@
                     <a href="#Z" class="text-green-600 hover:text-green-800 border border-green-600 rounded px-3 py-1">Z</a>
                 </div>
 
-                <h1 class="w-full text-[30px] justify-start flex items-start">Daftar Penyakit</h1>
-                
-                <div class="w-full text-[20px] ">
+                <!-- Penyakit -->
+                <div class="w-full text-[20px] space-y-6">
+                    <div id="A">
+                        <h1>ASMA</h1>
+                        <p>Penyakit kronis yang mempengaruhi saluran pernapasan dan menyebabkan sesak napas.</p>
+                    </div>
+                    
+                    <div id="B">
+                        <h1>BRONKITIS</h1>
+                        <p>Radang pada saluran bronkus yang menyebabkan batuk berdahak dan sesak napas.</p>
+                    </div>
+                    
+                    <div id="C">
+                        <h1>DIABETES</h1>
+                        <p>Kondisi kronis yang mempengaruhi kemampuan tubuh untuk memproduksi atau menggunakan insulin.</p>
+                    </div>
 
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
-                    <h1>ASMA</h1>
+                    <!-- Tambahkan penyakit sesuai abjad lainnya -->
                 </div>
-
             </div>
 
-            <div class="w-[30%] ">
-                <div class="w-auto px-10 flex justify-center items-start flex-col">      
-                    <div class="flex justify-center items-center flex-col gap-12">
-                        <img class="w-full h-[600px] object-cover rounded-md" src="Gambar/images.jpeg" alt="iklan cuy">
-                        <img class="w-full h-[600px] object-cover rounded-md" src="Gambar/images.jpeg" alt="iklan cuy">
-                    </div>
+            <!-- Bagian kanan (iklan) -->
+            <div class="w-full lg:w-[30%] bg-white flex items-start justify-center rounded-xl shadow-md p-6 lg:p-10">
+                <div class="flex justify-center items-start flex-col gap-4">
+                    <img class="w-full h-[300px] lg:h-[600px] object-cover rounded-md" src="Gambar/images.jpeg" alt="iklan cuy">
+                    <img class="w-full h-[300px] lg:h-[600px] object-cover rounded-md" src="Gambar/images.jpeg" alt="iklan cuy">
                 </div>
             </div>
         </div>
