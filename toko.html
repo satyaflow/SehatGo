@@ -25,15 +25,75 @@
 
 <body class="bg-gray-100">
 
-    <header class="bg-white shadow pb-6">
-        <h1 class="text-center text-3xl font-bold">Toko Obat Online</h1>
+  <header class="pb-6 bg-white lg:pb-0">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <!-- lg+ -->
+        <nav class="flex items-center justify-between h-16 lg:h-20">
+            <div class="flex-shrink-0">
+                <a href="#" title="" class="flex">
+                    <img class="w-auto h-8 lg:h-10"
+                        src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
+                </a>
+            </div>
+
+            <button type="button"
+                class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+                <!-- Menu open: "hidden", Menu closed: "block" -->
+                <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                </svg>
+
+                <!-- Menu open: "block", Menu closed: "hidden" -->
+                <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+                <a href="index.html" title=""
+                    class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
+                    Beranda </a>
+
+                <a href="tentang.html" title=""
+                    class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
+                    Tentang </a>
+
+                <a href="artikel.html" title=""
+                    class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
+                    Artikel </a>
+
+                <a href="toko.html" title=""
+                    class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
+                    SehatGo Shop </a>
+            </div>
+
+            <a href="login.html" title=""
+                class="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
+                role="button"> Daftar / Login </a>
+        </nav>
+    </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="w-full lg:h-[40vh] hijau flex flex-col lg:flex-row justify-center items-center py-8">
-            <h2 class="text-white text-4xl lg:text-5xl font-bold">Selamat Datang di Toko Obat Online</h2>
-        </section>
+      <div class="lg:w-full lg:h-[40vh] h-[70vh] hijau flex justify-center items-center">
+
+        <div class="lg:w-[70%] h-[100%] flex flex-col justify-center items-center w-[100%]  lg:flex-row">
+            <div class="lg:w-[50%] w-[85%]  flex justify-center items-start flex-col gap-y-4">
+                <div class="flex justify-center items-center gap-x-4">
+                    <a href="index.html" class="text-white font-medium text-2xl">Beranda</a>
+                    <p class="text-white font-bold">/</p>
+                    <a href="toko.html" class="text-white font-medium text-2xl">Toko</a>
+                </div>
+                <h1 class="text-white font-bold text-4xl">Obat Obatan</h1>
+                <p class="text-white font-semibold text-xl w-[80%] leading-8">Obat mantap penguat bagi cowok dan tahan lama bikin senang puas banget terjamin pasangan makin cinta anjay mantap</p>
+            </div>
+           <div class="w-auto flex justify-center items-center">
+            <img class="w-[33rem] h-[25rem]" src="Gambar/dokter-2.png" alt="Ilustrasi">
+           </div>
+        </div>
+    </div>
 
         <!-- Kategori Section -->
         <section class="w-full h-auto pt-12 flex justify-center items-center bg-[#F9F9F9]">
