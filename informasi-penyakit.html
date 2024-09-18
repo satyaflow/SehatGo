@@ -21,85 +21,50 @@
 </head>
 
 <body>
-  <header class="pb-6 bg-white lg:pb-0">
+  <header class="pb-0  bg-white lg:pb-0"></header>
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <!-- lg+ -->
-      <nav class="flex items-center justify-between h-16 lg:h-20">
-        <div class="flex-shrink-0">
-          <a href="#" title="" class="flex">
-            <img class="w-auto h-8 lg:h-10" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg"
-              alt="" />
-          </a>
-        </div>
+        <nav class="flex items-center justify-between h-16 lg:h-20">
+            <div class="flex-shrink-0 ">
+                <a href="#" title="" class="flex">
+                    <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="" />
+                </a>
+            </div>
 
-        <button type="button"
-          class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-          <!-- Menu open: "hidden", Menu closed: "block" -->
-          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-          </svg>
+            <button type="button" id="button-muncul"
+                class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+                <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                </svg>
+                <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-          <!-- Menu open: "block", Menu closed: "hidden" -->
-          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+            <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+                <a href="index.html" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
+                <a href="tentang.html" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tentang</a>
+                <a href="artikel.html" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Artikel</a>
+                <a href="toko.html" class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">SehatGo Shop</a>
+            </div>
 
-        <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-          <a href="index.html" title=""
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-            Beranda </a>
+            <a href="login.html" class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700">Daftar / Login</a>
+        </nav>
 
-          <a href="tentang.html" title=""
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-            Tentang </a>
-
-          <a href="artikel.html" title=""
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-            Artikel </a>
-
-          <a href="toko.html" title=""
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-            SehatGo Shop </a>
-        </div>
-
-        <a href="login.html" title=""
-          class="items-center justify-center hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700"
-          role="button"> Daftar / Login </a>
-      </nav>
-
-      <!-- xs to lg -->
-      <!-- <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
-        <div class="flow-root">
-          <div class="flex flex-col px-6 -my-2 space-y-1">
-            <a href="website/anjay.html" title=""
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-              Features </a>
-
-            <a href="website/anjay.html" title=""
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-              Solutions </a>
-
-            <a href="website/anjay.html" title=""
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-              Resources </a>
-
-            <a href="website/anjay.html" title=""
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-              Pricing </a>
-          </div>
-        </div> -->
-
-        <!-- <div class="px-6 mt-6">
-          <a href="#" title=""
-            class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md tems-center hover:bg-blue-700 focus:bg-blue-700"
-            role="button"> Get started now </a>
-        </div> -->
-      </nav>
+        <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
+            <div class="flow-root">
+                <div class="flex flex-col px-6 -my-2 space-y-1">
+                    <a href="website/index.html" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
+                    <a href="website/tentang.html" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tentang</a>
+                    <a href="website/artikel.html" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Artikel</a>
+                    <a href="website/toko.html" class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Toko</a>
+                </div>
+            </div>
+            <div class="px-6 mt-6">
+                <a href="#" class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700">Daftar / Login</a>
+            </div>
+        </nav>
     </div>
-  </header>
+</header>
 
   <div class="w-full h-auto flex lg:justify-center justify-start px-16 items-center">
 
@@ -209,18 +174,20 @@
   </div>
   </div>
 
-  <section class="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
+  <section class="py-10 sm:pt-16 lg:pt-24 bg-white"></section>
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
         <div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-          <img class="w-auto h-9" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
+          <a href="index.html">
+            <img class="w-auto h-[50px]" src="Gambar/Logo.png" alt="" />
+          </a>
 
-          <p class="text-base leading-relaxed text-gray-600 mt-7">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-            amet sint. Velit officia consequat duis enim velit mollit.
+          <p class="text-justify leading-relaxed text-gray-600 mt-5">
+            SehatGo adalah platform kesehatan yang menawarkan solusi fleksibel dan personal untuk memenuhi kebutuhan
+            unik setiap individu.
           </p>
 
-          <ul class="flex items-center space-x-3 mt-9">
+          <ul class="flex items-center space-x-3 mt-8">
             <li>
               <a href="#" title=""
                 class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
@@ -273,35 +240,35 @@
 
         <div>
           <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">
-            Company
+            SehatGo
           </p>
 
           <ul class="mt-6 space-y-4">
             <li>
-              <a href="#" title=""
+              <a href="index.html" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                About
+                Beranda
               </a>
             </li>
 
             <li>
-              <a href="#" title=""
+              <a href="tentang.html" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Features
+                Tentang
               </a>
             </li>
 
             <li>
-              <a href="#" title=""
+              <a href="artikel.html" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Works
+                Artikel
               </a>
             </li>
 
             <li>
-              <a href="#" title=""
+              <a href="login.html" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Career
+                Daftar / Login
               </a>
             </li>
           </ul>
@@ -309,35 +276,35 @@
 
         <div>
           <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">
-            Help
+            Lainnya
           </p>
 
           <ul class="mt-6 space-y-4">
             <li>
-              <a href="#" title=""
+              <a href="toko.html" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Customer Support
+                SehaGo Shop
+              </a>
+            </li>
+
+            <li>
+              <a href="tanya-dokter.html" title=""
+                class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
+                Tanya Dokter
               </a>
             </li>
 
             <li>
               <a href="#" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Delivery Details
+                Penyakit
               </a>
             </li>
 
             <li>
               <a href="#" title=""
                 class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Terms & Conditions
-              </a>
-            </li>
-
-            <li>
-              <a href="#" title=""
-                class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">
-                Privacy Policy
+                Obat
               </a>
             </li>
           </ul>
@@ -345,19 +312,19 @@
 
         <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
           <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">
-            Subscribe to newsletter
+            Ikuti Kami Untuk Berita Baru
           </p>
 
           <form action="#" method="POST" class="mt-6">
             <div>
               <label for="email" class="sr-only">Email</label>
-              <input type="email" name="email" id="email" placeholder="Enter your email"
+              <input type="email" name="email" id="email" placeholder="Masukan Email"
                 class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
             </div>
 
             <button type="submit"
-              class="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700">
-              Subscribe
+              class="inline-flex items-center justify-center px-16 py-4 mt-6 font-semibold text-white transition-all duration-200 hijau rounded-md hover:bg-white focus:bg-white hover:text-black hover:ring hover:ring-emerald-400">
+              Ikuti
             </button>
           </form>
         </div>
@@ -366,10 +333,23 @@
       <hr class="mt-16 mb-10 border-gray-200" />
 
       <p class="text-sm text-center text-gray-600">
-        © Copyright 2021, All Rights Reserved by Postcraft
+        © Copyright 2021, All Rights Reserved by SehatGo
       </p>
     </div>
   </section>
+
+</body>
+
+</html>
+
+<script>
+  const button = document.getElementById('button-muncul');
+  const menu = document.getElementById('muncul');
+
+  button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+  });
+</script>
 </body>
 
 </html>
