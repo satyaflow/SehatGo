@@ -71,7 +71,7 @@
 
 
   <div class="w-full h-auto hijau flex justify-center items-center">
-    <div class="lg:w-[65%] w-full h-full flex justify-center items-center flex-col lg:flex-row py-12">
+    <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%]  w-full h-full flex justify-center items-center flex-col lg:flex-row py-12">
       <div class="lg:w-[55%] w-[80%] h-full flex justify-center items-start flex-col gap-4">
         <div class="w-auto h-auto flex justify-start items-center gap-3 text-white font-semibold text-lg">
           <a href="index.html">Beranda</a>
@@ -116,12 +116,12 @@
 
   <div class="w-full h-auto flex justify-center items-center bg-[#F9F9F9] flex-col gap-8">
 
-    <div class="lg:w-[65%] w-[90%] h-auto flex justify-start items-start flex-col pt-12 text-gray-700 gap-4">
+    <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] h-auto flex justify-start items-start flex-col pt-12 text-gray-700 gap-4">
       <h1 class="font-bold text-3xl">Cari Dokter Konsultasi</h1>
       <p class="font-medium">Memilih dokter sesuai kebutuhan yang diinginkan </p>
     </div>
 
-    <div class="lg:w-[65%] w-[90%] flex items-center justify-center ">
+    <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] flex items-center justify-center ">
       <input class="lg:w-[88%] w-[75%] bg-white py-6 px-4 rounded-md flex justify-between items-center"
         placeholder="Masukan Pesan">
       </input>
@@ -131,9 +131,9 @@
     </div>
 
 
-    <div class="lg:w-[65%] w-full h-auto flex flex-col lg:flex-row lg:items-start items-center justify-center gap-8 pb-8">
+    <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-full h-auto flex flex-col lg:flex-row lg:items-start items-center justify-center gap-8 pb-8">
       <div class="lg:w-[30%] w-[90%] h-full flex items-center justify-start flex-col gap-8">
-        <div class="w-full h-[400px] bg-white border-2 border-gray-200 rounded-md p-6">
+        <div class="w-full h-[400px] bg-white border-2 border-gray-200 rounded-md p-6 lg:block hidden">
           <div class="w-full flex justify-between items-center pb-4">
             <h2 class="font-medium text-xl">Pilih Kota</h2>
             <a href="index.html" class=" font-semibold text-[#2DD8A3]">Lihat Semua</a>
@@ -169,7 +169,8 @@
           </form>
         </div>
 
-        <div class="w-full h-[400px] bg-white border-2 border-gray-200 rounded-md p-6">
+
+        <div class="w-full h-[400px] bg-white border-2 border-gray-200 rounded-md p-6 lg:block hidden">
           <div class="w-full flex justify-between items-center pb-4">
             <h2 class="font-medium text-xl">Pilih Keahlian</h2>
             <a href="index.html" class=" font-semibold text-[#2DD8A3]">Lihat Semua</a>
@@ -200,9 +201,45 @@
               <input type="radio" id="html" name="fav_language" value="HTML" class="scale-[1.8] border-gray-600">
               <label for="html" class="font-semibold text-base text-gray-700">Semua Kota</label>
             </div>
-
-
           </form>
+        </div>
+
+
+        <div class="w-full flex justify-between h-auto items-center lg:hidden block">
+
+          <div class="w-[45%]">     
+            <h1 class="pb-4 font-semibold text-gray-600 text-xl">Pilih Kota</h1> 
+            <div class="relative">
+              <select
+                  class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-6 pr-12 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                  <option value="brazil">Kota Baru</option>
+                  <option value="bucharest">Bucharest</option>
+                  <option value="london">London</option>
+                  <option value="washington">Washington</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="w-[45%]">     
+            <h1 class="pb-4 font-semibold text-gray-600 text-xl">Pilih Keahilian</h1> 
+            <div class="relative">
+              <select
+                  class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-6 pr-12 py-4 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                  <option value="brazil">Spesialis Gigi</option>
+                  <option value="bucharest">Bucharest</option>
+                  <option value="london">London</option>
+                  <option value="washington">Washington</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+              </svg>
+            </div>
+          </div>
+
+          
         </div>
 
       </div>
