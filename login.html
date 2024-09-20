@@ -32,44 +32,16 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        /* Zoom Animation Styles */
-        .zoom-in {
-            animation: zoomIn 0.5s forwards;
-        }
-        .zoom-out {
-            animation: zoomOut 0.5s forwards;
-        }
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes zoomOut {
-            from {
-                transform: scale(1);
-                opacity: 1;
-            }
-            to {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 
-<body>
+<body class="bg-black">
     <div id="app" data-barba="wrapper">
         <!-- Loading Overlay -->
         <div id="loading-overlay" class="flex">
             <div class="loader"></div>
         </div>
-        
+
         <section data-barba="container" data-barba-namespace="login" class="relative h-screen py-10 bg-gray-900 sm:py-16 lg:py-24">
             <!-- Konten Halaman Login -->
             <div class="relative md:max-w-lg w-[90%] lg:pt-16 pt-28 mx-auto sm:px-0">
@@ -77,7 +49,7 @@
                     <div class="px-4 py-6 sm:px-8 sm:py-7">
                         <div class="text-center">
                             <h2 class="text-3xl font-bold text-gray-900">Daftar / Masuk</h2>
-                            <p class="mt-2 text-base text-gray-600">Masukan atau membuat data akun anda </p>
+                            <p class="mt-2 text-base text-gray-600">Masukan atau membuat data akun anda</p>
                         </div>
                         <form action="#" method="POST" class="mt-8">
                             <div class="space-y-5">
@@ -123,38 +95,24 @@
                 transitions: [{
                     name: 'fade',
                     leave(data) {
-                        // Show loading overlay and animate zoom out
+                        // Show loading overlay without zoom animation
                         document.getElementById('loading-overlay').style.display = 'flex';
                         gsap.to(data.current.container, {
                             opacity: 0,
-                            scale: 0.8,
-                            duration: 0.5,
+                            duration: 0.7,
                             onComplete: () => {
-                                gsap.to('#loading-overlay', {
-                                    opacity: 0,
-                                    duration: 0.5,
-                                    onComplete: () => {
-                                        document.getElementById('loading-overlay').style.display = 'none';
-                                    }
-                                });
+                                document.getElementById('loading-overlay').style.display = 'none';
                             }
                         });
                     },
                     enter(data) {
-                        // Show loading overlay and animate zoom in
+                        // Show loading overlay during page load without zoom animation
                         document.getElementById('loading-overlay').style.display = 'flex';
                         gsap.from(data.next.container, {
                             opacity: 0,
-                            scale: 0.8,
-                            duration: 0.5,
+                            duration: 0.7,
                             onComplete: () => {
-                                gsap.to('#loading-overlay', {
-                                    opacity: 0,
-                                    duration: 0.5,
-                                    onComplete: () => {
-                                        document.getElementById('loading-overlay').style.display = 'none';
-                                    }
-                                });
+                                document.getElementById('loading-overlay').style.display = 'none';
                             }
                         });
                     }

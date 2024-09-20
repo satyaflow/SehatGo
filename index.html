@@ -31,6 +31,12 @@
 
 <body>
 
+  <div id="app" data-barba="wrapper">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="flex">
+        <div class="loader"></div>
+    </div>
+
   <header class="pb-0  bg-white lg:pb-0 fixed w-full shadow-md z-10">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <nav class="flex items-center justify-between h-16 lg:h-20">
@@ -666,24 +672,34 @@
   (adsbygoogle = window.adsbygoogle || []).push({});
 
   document.addEventListener('DOMContentLoaded', function () {
-    barba.init({
-        transitions: [{
-            name: 'fade',
-            leave(data) {
-                return gsap.to(data.current.container, {
-                    opacity: 0,
-                    duration: 0.5
-                });
-            },
-            enter(data) {
-                return gsap.from(data.next.container, {
-                    opacity: 0,
-                    duration: 0.5
-                });
-            }
-        }]
-    });
-});
+            barba.init({
+                transitions: [{
+                    name: 'fade',
+                    leave(data) {
+                        // Show loading overlay without zoom animation
+                        document.getElementById('loading-overlay').style.display = 'flex';
+                        gsap.to(data.current.container, {
+                            opacity: 0,
+                            duration: 0.7,
+                            onComplete: () => {
+                                document.getElementById('loading-overlay').style.display = 'none';
+                            }
+                        });
+                    },
+                    enter(data) {
+                        // Show loading overlay during page load without zoom animation
+                        document.getElementById('loading-overlay').style.display = 'flex';
+                        gsap.from(data.next.container, {
+                            opacity: 0,
+                            duration: 0.7,
+                            onComplete: () => {
+                                document.getElementById('loading-overlay').style.display = 'none';
+                            }
+                        });
+                    }
+                }]
+            });
+        });
 
 
 </script>

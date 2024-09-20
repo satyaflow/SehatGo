@@ -11,50 +11,49 @@
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <style>
-        /* Loader Styles */
-        #loading-overlay {
-          display: none;
-          position: fixed;
-          inset: 0;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 50;
-          align-items: center;
-          justify-content: center;
-        }
-        .loader {
-          font-size: 2rem;
-          color: #fff;
-          animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+        /* Optimisasi untuk animasi transform */
+        [data-barba="container"] {
+            will-change: opacity, transform;
         }
 
-        /* Zoom Animation Styles */
-        .zoom-in {
-            animation: zoomIn 0.5s forwards;
+        /* Loader Styles */
+        #loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+            will-change: opacity;
         }
-        .zoom-out {
-            animation: zoomOut 0.5s forwards;
+
+        .loader {
+            font-size: 2rem;
+            color: #fff;
+            animation: spin 1s linear infinite;
         }
-        @keyframes zoomIn {
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Fade Animation Styles */
+        @keyframes fadeIn {
             from {
-                transform: scale(0.8);
                 opacity: 0;
             }
             to {
-                transform: scale(1);
                 opacity: 1;
             }
         }
-        @keyframes zoomOut {
+
+        @keyframes fadeOut {
             from {
-                transform: scale(1);
                 opacity: 1;
             }
             to {
-                transform: scale(0.8);
                 opacity: 0;
             }
         }
@@ -67,7 +66,7 @@
         <div id="loading-overlay" class="flex">
             <i class='bx bxs-message-square-dots loader'></i>
         </div>
-        
+
         <section data-barba="container" data-barba-namespace="verifikasi" class="relative h-screen py-10 bg-gray-900 sm:py-16 lg:py-24">
             <div class="absolute inset-0">
                 <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/signin/2/man-eating-noodles.jpg" alt="" />
@@ -122,38 +121,28 @@
         document.addEventListener('DOMContentLoaded', function () {
             barba.init({
                 transitions: [{
-                    name: 'zoom',
+                    name: 'fade',
                     leave(data) {
-                        document.getElementById('loading-overlay').style.display = 'flex';
-                        gsap.to(data.current.container, {
-                            opacity: 0,
-                            scale: 0.8,
-                            duration: 0.5,
-                            ease: 'power1.inOut',
-                            onComplete: () => {
-                                gsap.to('#loading-overlay', { 
-                                    opacity: 1, 
-                                    duration: 0.5 
-                                });
-                            }
+                        requestAnimationFrame(() => {
+                            document.getElementById('loading-overlay').style.display = 'flex';
+                            gsap.to(data.current.container, {
+                                autoAlpha: 0,
+                                duration: 0.4,  // Durasi animasi yang lebih singkat
+                                ease: 'power2.out'  // Ease yang lebih halus
+                            });
                         });
                     },
                     enter(data) {
-                        document.getElementById('loading-overlay').style.display = 'flex';
-                        gsap.from(data.next.container, {
-                            opacity: 0,
-                            scale: 0.8,
-                            duration: 0.5,
-                            ease: 'power1.inOut',
-                            onComplete: () => {
-                                gsap.to('#loading-overlay', { 
-                                    opacity: 0, 
-                                    duration: 0.5,
-                                    onComplete: () => {
-                                        document.getElementById('loading-overlay').style.display = 'none';
-                                    }
-                                });
-                            }
+                        requestAnimationFrame(() => {
+                            document.getElementById('loading-overlay').style.display = 'flex';
+                            gsap.from(data.next.container, {
+                                autoAlpha: 0,
+                                duration: 0.4,  // Durasi animasi yang lebih singkat
+                                ease: 'power2.out',
+                                onComplete: () => {
+                                    document.getElementById('loading-overlay').style.display = 'none';
+                                }
+                            });
                         });
                     }
                 }]
