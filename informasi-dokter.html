@@ -10,7 +10,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  
+
   <style>
     .text-judul {
       color: rgb(121, 121, 121);
@@ -58,29 +58,29 @@
         </div>
 
         <a href="login.html"
-        class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
-        Daftar / Login
-    </a>
+          class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+          Daftar / Login
+        </a>
 
-      <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
-        <div class="flow-root">
-          <div class="flex flex-col px-6 -my-2 space-y-1">
-            <a href="index.html"
-              class="w-full  inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
-            <a href="tentang.html"
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tentang</a>
-            <a href="artikel.html"
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Artikel</a>
-            <a href="toko.html"
-              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Toko</a>
+        <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
+          <div class="flow-root">
+            <div class="flex flex-col px-6 -my-2 space-y-1">
+              <a href="index.html"
+                class="w-full  inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
+              <a href="tentang.html"
+                class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tentang</a>
+              <a href="artikel.html"
+                class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Artikel</a>
+              <a href="toko.html"
+                class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Toko</a>
+            </div>
           </div>
-        </div>
-        <div class="px-6 mt-6">
-          <a href="login.html"
-            class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700">Daftar
-            / Login</a>
-        </div>
-      </nav>
+          <div class="px-6 mt-6">
+            <a href="login.html"
+              class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700">Daftar
+              / Login</a>
+          </div>
+        </nav>
     </div>
   </header>
 
@@ -304,87 +304,111 @@
 
               </div>
               <div class="w-full h-[40%] flex justify-center items-end">
-                <button id="consultButton"
-                  class="w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
+                <!-- Konsultasi Button -->
+                <button
+                  class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                   Konsultasi
                 </button>
               </div>
 
 
 
-              <!-- Fullscreen Checkout Form -->
-<div id="checkoutForm" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-  <div class="bg-white w-full max-w-4xl p-8 rounded-lg shadow-xl relative">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">Form Konsultasi</h2>
-    <form action="#" method="POST" class="grid grid-cols-2 gap-6">
-
-      <!-- Nama Depan -->
-      <div>
-        <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
-        <input type="text" id="firstName" name="firstName" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required>
-      </div>
-
-      <!-- Pilih Paket -->
-      <div>
-        <label for="package" class="block text-sm font-medium text-gray-700">Pilih Paket</label>
-        <select id="package" name="package" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required>
-          <option value="" disabled selected>Pilih Paket Konsultasi</option>
-          <option value="basic">Paket Basic</option>
-          <option value="premium">Paket Premium</option>
-          <option value="vip">Paket VIP</option>
-        </select>
-      </div>
-
-      <!-- Tanggal Lahir -->
-      <div>
-        <label for="dob" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
-        <input type="date" id="dob" name="dob" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required>
-      </div>
-
-      <!-- Waktu Konsultasi -->
-      <div>
-        <label for="consultationDate" class="block text-sm font-medium text-gray-700">Waktu Konsultasi</label>
-        <input type="date" id="consultationDate" name="consultationDate" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required>
-      </div>
-
-      <!-- Email -->
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-        <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required>
-      </div>
-
-      <!-- No Telepon -->
-      <div>
-        <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
-        <input type="tel" id="phone" name="phone" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required>
-      </div>
-
-      <!-- Deskripsi Permasalahan (Full Width) -->
-      <div class="col-span-2">
-        <label for="description" class="block text-sm font-medium text-gray-700">Deskripsi Permasalahan</label>
-        <textarea id="description" name="description" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent" required></textarea>
-      </div>
-
-     <!-- Pesan Tambahan (Full Width) -->
-     <div class="col-span-2">
-      <label for="message" class="block text-sm font-medium text-gray-700">Pesan Tambahan</label>
-      <textarea id="message" name="message" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent"></textarea>
-    </div>
-
-      <!-- Button Actions (Full Width) -->
-      <div class="col-span-2 flex justify-between items-center">
-        <button type="submit" class="bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold py-2 px-6 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#28c091] focus:ring-offset-2">
-          Konsultasi
-        </button>
-        <button type="button" id="closeForm" class="text-gray-600 hover:text-gray-900 font-bold py-2 px-4">
-          Batal
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
 
 
+
+            </div>
+          </div>
+
+
+          <!-- Fullscreen Checkout Form -->
+          <div
+            class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
+            <div class="w-full max-w-4xl p-8 rounded-lg shadow-xl relative bg-[#f7f9ff]">
+              <h2 class="text-3xl font-bold text-gray-800 mb-2">Form Konsultasi</h2>
+              <p class="mb-6">Isikan data anda untuk konsultasi</p>
+              <form action="#" method="POST" class="grid grid-cols-2 gap-4">
+
+                <!-- Nama Depan -->
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
+                  <input type="text" id="firstName" name="firstName"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+                    required placeholder="Masukan Nama">
+                </div>
+
+                <!-- Pilih Paket -->
+                <div>
+                  <label for="package" class="block text-sm font-medium text-gray-700">Pilih Paket</label>
+                  <select id="package" name="package"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 bg-white focus:outline-none focus:ring-2 focus:border-transparent"
+                    required>
+                    <option value="" disabled selected>Pilih Paket Konsultasi</option>
+                    <option value="basic">Paket Online</option>
+                    <option value="premium">Paket Konsultasi Langsung</option>
+                  </select>
+                </div>
+
+                <!-- Tanggal Lahir -->
+                <div>
+                  <label for="dob" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+                  <input type="date" id="dob" name="dob"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+                    required>
+                </div>
+
+                <!-- Waktu Konsultasi -->
+                <div>
+                  <label for="consultationDate" class="block text-sm font-medium text-gray-700">Waktu Konsultasi</label>
+                  <input type="date" id="consultationDate" name="consultationDate"
+                    class="t-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+                    required>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+                    required placeholder="Masukan Email">
+                </div>
+
+                <!-- No Telepon -->
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
+                  <input type="tel" id="phone" name="phone"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+                    required placeholder="Masukan No Telepon">
+                </div>
+
+                <!-- Deskripsi Permasalahan (Full Width) -->
+                <div class="col-span-2">
+                  <label for="description" class="block text-sm font-medium text-gray-700">Deskripsi
+                    Permasalahan</label>
+                  <textarea id="description" name="description" rows="3"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
+                    required placeholder="Masukan Deskripsi Permasalahan"></textarea>
+                </div>
+
+                <!-- Pesan Tambahan (Full Width) -->
+                <div class="col-span-2">
+                  <label for="message" class="block text-sm font-medium text-gray-700">Pesan Tambahan</label>
+                  <textarea id="message" name="message" rows="3"
+                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
+                    placeholder="Masukan Pesan Tambahan"></textarea>
+                </div>
+
+                <!-- Button Actions (Full Width) -->
+                <div class="col-span-2 flex justify-between items-center">
+                  <button type="submit"
+                    class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
+                    Konsultasi
+                  </button>
+                  <button type="button"
+                    class="closeForm w-[48%] bg-gray-800 hover:bg-black duration-300 text-white font-bold py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
+                    Batal
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -422,12 +446,12 @@
 
               </div>
               <div class="w-full h-[40%] flex justify-center items-end">
-                <button id="consultButton"
-                  class="w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
+                <!-- Konsultasi Button -->
+                <button
+                  class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                   Konsultasi
                 </button>
               </div>
-              
             </div>
           </div>
 
@@ -465,8 +489,11 @@
 
               </div>
               <div class="w-full h-[40%] flex justify-center items-end">
-                <a href=""
-                  class=" w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">Konsultasi</a>
+                <!-- Konsultasi Button -->
+                <button
+                  class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
+                  Konsultasi
+                </button>
               </div>
             </div>
           </div>
@@ -505,8 +532,11 @@
 
               </div>
               <div class="w-full h-[40%] flex justify-center items-end">
-                <a href=""
-                  class=" w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">Konsultasi</a>
+                <!-- Konsultasi Button -->
+                <button
+                  class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
+                  Konsultasi
+                </button>
               </div>
             </div>
           </div>
@@ -682,20 +712,23 @@
   });
 
 
-  const consultButton = document.getElementById('consultButton');
-  const checkoutForm = document.getElementById('checkoutForm');
-  const closeForm = document.getElementById('closeForm');
+  const consultButtons = document.querySelectorAll('.consultButton');
+  const checkoutForms = document.querySelectorAll('.checkoutForm');
+  const closeForms = document.querySelectorAll('.closeForm');
 
-  consultButton.addEventListener('click', function() {
-    checkoutForm.classList.remove('hidden');
+  consultButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      checkoutForms.forEach(form => form.classList.remove('hidden'));
+    });
   });
 
-  closeForm.addEventListener('click', function() {
-    checkoutForm.classList.add('hidden');
+  closeForms.forEach(button => {
+    button.addEventListener('click', function () {
+      checkoutForms.forEach(form => form.classList.add('hidden'));
+    });
   });
+
 </script>
-
-
 
 </body>
 
