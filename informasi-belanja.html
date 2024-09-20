@@ -65,26 +65,16 @@
 
 <body class="bg-gray-50">
 
-  <header class="pb-0  bg-white lg:pb-0 fixed w-full shadow-md z-10">
+  <header class="pb-0  bg-white lg:pb-0 fixed w-full order-last shadow-md z-10">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <nav class="flex items-center justify-between h-16 lg:h-20">
         <div class="flex-shrink-0 ">
-          <a href="index.html" class="flex">
-            <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
+          <a href="#" title="" class="flex">
+            <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="" />
           </a>
         </div>
 
-        <button type="button" id="button-muncul"
-          class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-          </svg>
-          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+
 
         <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
           <a href="index.html"
@@ -101,13 +91,41 @@
         <a href="login.html"
           class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700">Daftar
           / Login</a>
+
+        <div class="flex justify-center items-center gap-6">
+          <div class="relative ml-4 flex items-center">
+            <!-- Ikon Keranjang dengan Badge Jumlah Barang -->
+            <div class="relative ml-4 flex items-center">
+              <i
+                class='bx bx-cart text-3xl text-[#2dd8a3] transition-transform duration-300 transform hover:scale-110'></i>
+              <span
+                class="cart-count absolute top-0 right-0 translate-x-3 -translate-y-2 px-2 py-1 text-xs font-semibold text-white bg-red-600 rounded-full shadow-lg flex items-center justify-center w-5 h-5 text-center border-2 border-white hidden">
+                0
+              </span>
+            </div>
+          </div>
+
+          <button type="button" id="button-muncul"
+            class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+            </svg>
+            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+
       </nav>
 
-      <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
+      <nav class="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
         <div class="flow-root">
           <div class="flex flex-col px-6 -my-2 space-y-1">
             <a href="index.html"
-              class="w-full  inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
+              class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
             <a href="tentang.html"
               class="inline-flex py-2 text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tentang</a>
             <a href="artikel.html"
