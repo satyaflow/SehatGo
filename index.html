@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="src/output.css" rel="stylesheet">
@@ -50,21 +52,32 @@
           </svg>
         </button>
 
-        <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+        <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
           <a href="index.html"
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Beranda</a>
+            class="relative text-base font-semibold text-[#66BBF8] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300"
+            aria-current="page">
+            Beranda
+          </a>
           <a href="tentang.html"
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tentang</a>
+            class="relative text-base font-semibold text-gray-900 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tentang
+          </a>
           <a href="artikel.html"
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Artikel</a>
+            class="relative text-base font-semibold text-gray-900 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Artikel
+          </a>
           <a href="toko.html"
-            class="text-base font-medium text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">SehatGo
-            Shop</a>
+            class="relative text-base font-semibold text-gray-900 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            SehatGo Shop
+          </a>
         </div>
+        
+        
 
         <a href="login.html"
-          class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md lg:inline-flex hover:bg-blue-700 focus:bg-blue-700">Daftar
-          / Login</a>
+        class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+        Daftar / Login
+    </a>
       </nav>
 
       <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
@@ -634,6 +647,10 @@
     </div>
   </section>
 
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="transitions.js"></script>
+
 </body>
 
 </html>
@@ -647,5 +664,26 @@
   });
 
   (adsbygoogle = window.adsbygoogle || []).push({});
+
+  document.addEventListener('DOMContentLoaded', function () {
+    barba.init({
+        transitions: [{
+            name: 'fade',
+            leave(data) {
+                return gsap.to(data.current.container, {
+                    opacity: 0,
+                    duration: 0.5
+                });
+            },
+            enter(data) {
+                return gsap.from(data.next.container, {
+                    opacity: 0,
+                    duration: 0.5
+                });
+            }
+        }]
+    });
+});
+
 
 </script>
