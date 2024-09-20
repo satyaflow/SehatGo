@@ -6,10 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Informasi Produk - Aloshop Style</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-
-.text-judul {
+    .text-judul {
       color: rgb(121, 121, 121);
     }
 
@@ -20,6 +24,7 @@
     .text-hijau {
       color: #2DD8A3;
     }
+
     /* Hover Zoom Animation */
     .product-image {
       transition: transform 0.3s ease-in-out;
@@ -72,10 +77,98 @@
     img[data-src].loaded {
       opacity: 1;
     }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
   </style>
 </head>
 
 <body class="bg-[#f7f9ff]">
+
+  <!-- Fullscreen Checkout Form -->
+  <div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
+    <div class="w-full max-w-4xl p-8 rounded-lg shadow-xl relative bg-[#f7f9ff]">
+      <h2 class="text-3xl font-bold text-gray-800 poppins mb-2">Form Pembelian</h2>
+      <p class="mb-6">Isikan data anda untuk konsultasi</p>
+      <form action="#" method="POST" class="grid grid-cols-2 gap-4">
+
+        <!-- Nama Depan -->
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
+          <input type="text" id="firstName" name="firstName"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+            required placeholder="Masukan Nama">
+        </div>
+
+        <!-- Pilih Paket -->
+        <div>
+          <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
+          <select id="package" name="package"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 bg-white focus:outline-none focus:ring-2 focus:border-transparent"
+            required>
+            <option value="" disabled selected>Pilih Metode Pembayaran</option>
+            <option value="basic">Bank Virtual</option>
+            <option value="premium">Cash On Delivery (COD)</option>
+          </select>
+        </div>
+
+
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+            required placeholder="Masukan Email">
+        </div>
+
+        <!-- No Telepon -->
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
+          <input type="tel" id="phone" name="phone"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
+            required placeholder="Masukan No Telepon">
+        </div>
+
+        <!-- Pesan Tambahan (Full Width) -->
+        <div class="col-span-2">
+          <label for="message" class="block text-sm font-medium text-gray-700">Alamat</label>
+          <textarea id="message" name="message" rows="3"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
+            placeholder="Masukan Alamat" required></textarea>
+        </div>
+
+        <!-- Pesan Tambahan (Full Width) -->
+        <div class="col-span-2">
+          <label for="message" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
+          <textarea id="message" name="message" rows="3"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
+            placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
+        </div>
+
+
+        <h1 class="3xl font-semibold ">Total Belanja : Rp.100.000</h1>
+
+        <!-- Button Actions (Full Width) -->
+        <div class="col-span-2 flex justify-between items-center">
+          <button type="submit"
+            class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
+            Pesan
+          </button>
+          <button type="button"
+            class="closeForm w-[48%] bg-gray-800 hover:bg-black duration-300 text-white font-bold py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
+            Batal
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <header class="pb-0  bg-white lg:pb-0 fixed w-full order-last shadow-md z-10">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -106,13 +199,13 @@
             SehatGo Shop
           </a>
         </div>
-        
+
 
         <a href="login.html"
-        class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
-        Daftar / Login
-    </a>
-    
+          class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+          Daftar / Login
+        </a>
+
         <div class="flex justify-center items-center gap-6">
           <div class="relative ml-4 flex items-center">
             <!-- Ikon Keranjang dengan Badge Jumlah Barang -->
@@ -157,10 +250,10 @@
         </div>
         <div class="px-6 mt-6">
           <a href="login.html"
-          class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
-          Daftar / Login
-      </a>
-      
+            class="inline-flex justify-center px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+            Daftar / Login
+          </a>
+
         </div>
       </nav>
     </div>
@@ -179,7 +272,7 @@
         </div>
         <!-- Detail Produk Utama -->
         <div class="w-full md:w-2/3 md:pl-8">
-          <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Degirol 0,25 mg</h1>
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 poppins mb-4">Degirol 0,25 mg</h1>
           <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
             Degirol adalah obat yang digunakan untuk mengobati berbagai kondisi. Jelaskan manfaat, fitur, atau informasi
             penting lainnya dengan singkat dan jelas untuk memudahkan pembeli.
@@ -204,7 +297,7 @@
           <!-- Tombol Aksi -->
           <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button
-              class="bg-[#2dd8a3] text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-lg text-sm sm:text-base btn-hover btn-active w-full sm:w-auto">
+              class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
               Beli Sekarang
             </button>
             <div class=" flex items-center">
@@ -223,7 +316,7 @@
 
     <!-- Produk Lainnya -->
     <div class="bg-white rounded-lg p-6 mb-6">
-      <h2 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-8">Produk Lainnya</h2>
+      <h2 class="text-xl sm:text-2xl font-semibold text-gray-700 poppins mb-8">Produk Lainnya</h2>
       <!-- Atur grid agar 6 produk tersusun dalam 2 baris dengan 3 produk di setiap baris -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Produk 1 -->
@@ -234,7 +327,7 @@
             data-src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol"
             alt="Product Image">
           <div class="p-4">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700 poppins mb-2">Nama Produk 1</h3>
             <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-2">Deskripsi singkat tentang produk ini.
               Highlight fitur menarik produk.</p>
             <div class="flex items-center mb-2">
@@ -244,7 +337,7 @@
             <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
             <div class="flex items-center justify-between mt-4">
               <button
-                class="bg-[#2dd8a3] text-white text-xs sm:text-xs md:text-xs font-semibold w-[45%] h-[50px] rounded-lg btn-hover btn-active">
+                class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                 Beli Sekarang
               </button>
 
@@ -267,7 +360,7 @@
             data-src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol"
             alt="Product Image">
           <div class="p-4">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700 poppins mb-2">Nama Produk 1</h3>
             <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-2">Deskripsi singkat tentang produk ini.
               Highlight fitur menarik produk.</p>
             <div class="flex items-center mb-2">
@@ -277,7 +370,7 @@
             <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
             <div class="flex items-center justify-between mt-4">
               <button
-                class="bg-[#2dd8a3] text-white text-xs sm:text-xs md:text-xs font-semibold w-[45%] h-[50px] rounded-lg btn-hover btn-active">
+                class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                 Beli Sekarang
               </button>
 
@@ -300,7 +393,7 @@
             data-src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol"
             alt="Product Image">
           <div class="p-4">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700 poppins mb-2">Nama Produk 1</h3>
             <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-2">Deskripsi singkat tentang produk ini.
               Highlight fitur menarik produk.</p>
             <div class="flex items-center mb-2">
@@ -310,7 +403,7 @@
             <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
             <div class="flex items-center justify-between mt-4">
               <button
-                class="bg-[#2dd8a3] text-white text-xs sm:text-xs md:text-xs font-semibold w-[45%] h-[50px] rounded-lg btn-hover btn-active">
+                class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                 Beli Sekarang
               </button>
 
@@ -333,7 +426,7 @@
             data-src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol"
             alt="Product Image">
           <div class="p-4">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700 poppins mb-2">Nama Produk 1</h3>
             <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-2">Deskripsi singkat tentang produk ini.
               Highlight fitur menarik produk.</p>
             <div class="flex items-center mb-2">
@@ -343,7 +436,7 @@
             <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
             <div class="flex items-center justify-between mt-4">
               <button
-                class="bg-[#2dd8a3] text-white text-xs sm:text-xs md:text-xs font-semibold w-[45%] h-[50px] rounded-lg btn-hover btn-active">
+                class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                 Beli Sekarang
               </button>
 
@@ -366,7 +459,7 @@
             data-src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol"
             alt="Product Image">
           <div class="p-4">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700 poppins mb-2">Nama Produk 1</h3>
             <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-2">Deskripsi singkat tentang produk ini.
               Highlight fitur menarik produk.</p>
             <div class="flex items-center mb-2">
@@ -376,7 +469,7 @@
             <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
             <div class="flex items-center justify-between mt-4">
               <button
-                class="bg-[#2dd8a3] text-white text-xs sm:text-xs md:text-xs font-semibold w-[45%] h-[50px] rounded-lg btn-hover btn-active">
+                class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                 Beli Sekarang
               </button>
 
@@ -399,7 +492,7 @@
             data-src="https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1697508249_degirol"
             alt="Product Image">
           <div class="p-4">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Nama Produk 1</h3>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700 poppins mb-2">Nama Produk 1</h3>
             <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-2">Deskripsi singkat tentang produk ini.
               Highlight fitur menarik produk.</p>
             <div class="flex items-center mb-2">
@@ -409,7 +502,7 @@
             <span class="text-lg font-bold text-[#2dd8a3]">Rp 100.000</span>
             <div class="flex items-center justify-between mt-4">
               <button
-                class="bg-[#2dd8a3] text-white text-xs sm:text-xs md:text-xs font-semibold w-[45%] h-[50px] rounded-lg btn-hover btn-active">
+                class="consultButton w-[60%] h-10px bg-[#2DD8A3] py-2 flex justify-center items-center font-bold rounded-md md:text-base text-xs text-white">
                 Beli Sekarang
               </button>
 
@@ -626,6 +719,23 @@
           cartCount.classList.remove('animate-ping');
         }, 1000);
       });
+    });
+  });
+
+
+  const consultButtons = document.querySelectorAll('.consultButton');
+  const checkoutForms = document.querySelectorAll('.checkoutForm');
+  const closeForms = document.querySelectorAll('.closeForm');
+
+  consultButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      checkoutForms.forEach(form => form.classList.remove('hidden'));
+    });
+  });
+
+  closeForms.forEach(button => {
+    button.addEventListener('click', function () {
+      checkoutForms.forEach(form => form.classList.add('hidden'));
     });
   });
 
