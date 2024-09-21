@@ -13,6 +13,22 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
     .text-judul {
       color: rgb(121, 121, 121);
     }
@@ -91,84 +107,82 @@
 
 <body class="bg-[#f7f9ff]">
 
-  <!-- Fullscreen Checkout Form -->
-  <div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
-    <div class="w-full max-w-4xl p-8 rounded-lg shadow-xl relative bg-[#f7f9ff]">
-      <h2 class="text-3xl font-bold text-gray-800 poppins mb-2">Form Pembelian</h2>
-      <p class="mb-6">Isikan data anda untuk konsultasi</p>
-      <form action="#" method="POST" class="grid grid-cols-2 gap-4">
-
-        <!-- Nama Depan -->
-        <div>
-          <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
-          <input type="text" id="firstName" name="firstName"
-            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
-            required placeholder="Masukan Nama">
-        </div>
-
-        <!-- Pilih Paket -->
-        <div>
-          <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
-          <select id="package" name="package"
-            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 bg-white focus:outline-none focus:ring-2 focus:border-transparent"
-            required>
-            <option value="" disabled selected>Pilih Metode Pembayaran</option>
-            <option value="basic">Bank Virtual</option>
-            <option value="premium">Cash On Delivery (COD)</option>
-          </select>
-        </div>
-
-
-
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email"
-            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
-            required placeholder="Masukan Email">
-        </div>
-
-        <!-- No Telepon -->
-        <div>
-          <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
-          <input type="tel" id="phone" name="phone"
-            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
-            required placeholder="Masukan No Telepon">
-        </div>
-
-        <!-- Pesan Tambahan (Full Width) -->
-        <div class="col-span-2">
-          <label for="message" class="block text-sm font-medium text-gray-700">Alamat</label>
-          <textarea id="message" name="message" rows="3"
-            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
-            placeholder="Masukan Alamat" required></textarea>
-        </div>
-
-        <!-- Pesan Tambahan (Full Width) -->
-        <div class="col-span-2">
-          <label for="message" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
-          <textarea id="message" name="message" rows="3"
-            class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
-            placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
-        </div>
-
-
-        <h1 class="3xl font-semibold ">Total Belanja : Rp.100.000</h1>
-
-        <!-- Button Actions (Full Width) -->
-        <div class="col-span-2 flex justify-between items-center">
-          <button type="submit"
-            class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
-            Pesan
-          </button>
-          <button type="button"
-            class="closeForm w-[48%] bg-gray-800 hover:bg-black duration-300 text-white font-bold py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
-            Batal
-          </button>
-        </div>
-      </form>
-    </div>
+<!-- Fullscreen Checkout Form -->
+<div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
+  <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative bg-white fade-in">
+    <h2 class="text-2xl font-bold text-gray-800 poppins mb-3">Form Pembelian</h2>
+    <p class="mb-4 text-sm">Isikan data anda untuk konsultasi</p>
+    <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  
+      <!-- Nama Depan -->
+      <div>
+        <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
+        <input type="text" id="firstName" name="firstName"
+          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+          required placeholder="Masukan Nama">
+      </div>
+  
+      <!-- Metode Pembayaran -->
+      <div>
+        <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
+        <select id="package" name="package"
+          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+          required>
+          <option value="" disabled selected>Pilih Metode Pembayaran</option>
+          <option value="basic">Bank Virtual</option>
+          <option value="premium">Cash On Delivery (COD)</option>
+        </select>
+      </div>
+  
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email"
+          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+          required placeholder="Masukan Email">
+      </div>
+  
+      <!-- No Telepon -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
+        <input type="tel" id="phone" name="phone"
+          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+          required placeholder="Masukan No Telepon">
+      </div>
+  
+      <!-- Alamat -->
+      <div class="col-span-2">
+        <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
+        <textarea id="address" name="address" rows="2"
+          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+          placeholder="Masukan Alamat" required></textarea>
+      </div>
+  
+      <!-- Pesan ke penjual -->
+      <div class="col-span-2">
+        <label for="sellerMessage" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
+        <textarea id="sellerMessage" name="sellerMessage" rows="2"
+          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+          placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
+      </div>
+  
+      <h1 class="col-span-2 text-lg font-semibold mt-3">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span></h1>
+  
+      <!-- Button Actions -->
+      <div class="col-span-2 flex justify-between items-center mt-3">
+        <button type="submit"
+          class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+          Pesan
+        </button>
+        <button type="button"
+          class="closeForm w-[48%] bg-red-600 hover:bg-red-700 duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+          Batal
+        </button>
+      </div>
+    </form>
   </div>
+</div>
+  
 
   <header class="pb-0  bg-white lg:pb-0 fixed w-full order-last shadow-md z-10">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
