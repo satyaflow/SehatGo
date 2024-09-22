@@ -8,14 +8,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="src/output.css" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script src="https://kit.fontawesome.com/75fb11a1e2.js" crossorigin="anonymous"></script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4337613008656490"
-    crossorigin="anonymous"></script>
   <style>
     .text-judul {
       color: rgb(121, 121, 121);
@@ -36,9 +33,10 @@
     .text-hijau {
       color: #2DD8A3;
     }
+
     .background {
-      background: rgb(50,213,134);
-      background: linear-gradient(90deg, rgba(50,213,134,1) 47%, rgba(65,255,196,1) 100%);
+      background: rgb(50, 213, 134);
+      background: linear-gradient(90deg, rgba(50, 213, 134, 1) 47%, rgba(65, 255, 196, 1) 100%);
     }
 
     body {
@@ -68,17 +66,19 @@
               <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
             </a>
           </div>
-        
+
           <button type="button" id="button-muncul"
             class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
             </svg>
-            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-        
+
           <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
             <a href="index.html"
               class="relative text-base font-semibold text-[#66BBF8] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300"
@@ -95,13 +95,13 @@
               after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
               Artikel
             </a>
-        
+
             <a href="penyakit.html"
               class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
               after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
               Penyakit
             </a>
-        
+
             <a href="tanya-dokter.html"
               class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
               after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
@@ -113,28 +113,29 @@
               Toko
             </a>
           </div>
-        
+
           <a href="login.html"
             class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
             Daftar / Login
           </a>
         </nav>
-        
+
 
         <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
           <div class="flow-root">
             <div class="flex flex-col px-6 -my-2 space-y-1">
               <a href="index.html"
-                class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-[#66BBF8] font-semibold"  >Beranda</a>
+                class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-[#66BBF8] font-semibold">Beranda</a>
               <a href="tentang.html"
                 class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tentang</a>
               <a href="artikel.html"
                 class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Artikel</a>
               <a href="penyakit.html"
                 class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Penyakit</a>
-                <a href="tanya-dokter.html"
-                class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya Dokter</a>
-                <a href="toko.html"
+              <a href="tanya-dokter.html"
+                class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya
+                Dokter</a>
+              <a href="toko.html"
                 class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Toko</a>
             </div>
           </div>
@@ -154,8 +155,10 @@
         class="lg:w-[90%]  xl:w-[80%] 2xl:w-[65%] md-[65%] w-full h-full flex flex-col lg:flex-row justify-between items-center py-4 gap-x-6">
         <div class="lg:w-[55%] w-full h-full flex justify-center lg:items-start items-center flex-col gap-4">
           <h1 class="font-bold text-white text-3xl md:text-4xl text-center font-poppins">Layanan Cepat dan Tepat</h1>
-          <p class="font-reguler text-white  lg:text-lg lg:text-start text-center lg:w-full w-[80%] font-roboto leading-[40px]">
-            Dapatkan layanan yang cepat dan tepat, memastikan kebutuhan Anda terpenuhi secara efisien dengan hasil terbaik.
+          <p
+            class="font-reguler text-white  lg:text-lg lg:text-start text-center lg:w-full w-[80%] font-roboto leading-[40px]">
+            Dapatkan layanan yang cepat dan tepat, memastikan kebutuhan Anda terpenuhi secara efisien dengan hasil
+            terbaik.
           </p>
           <div class="w-full h-auto flex lg:justify-start justify-center items-center gap-6 pt-4 lg:px-0 px-4">
             <a href="informasi-dokter.html"
@@ -213,7 +216,8 @@
 
 
       <div class="w-full bg-white flex flex-col items-center py-0 overflow-hidden">
-        <div class=" lg:w-[90%] xl:w-[80%] w-full 2xl:w-[65%] pb-6 my-10 flex flex-col justify-center items-center gap-16">
+        <div
+          class=" lg:w-[90%] xl:w-[80%] w-full 2xl:w-[65%] pb-6 my-10 flex flex-col justify-center items-center gap-16">
           <div class="lg:w-[100%] w-[90%] flex justify-between items-center">
             <h1 class="font-bold text-3xl text-gray-800 font-poppins">Spesialisasi</h1>
             <a class="font-semibold font-roboto text-base text-gray-500 hover:text-emerald-400 duration-300"
@@ -225,31 +229,35 @@
             <!-- Item Dokter Spesialisasi -->
             <a href="informasi-dokter.html"
               class="flex flex-col items-center gap-4 lg:w-[20%] md:w-[20%] w-[40%] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
-              <img class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full" src="Gambar/spealis-1.jpg"
-                alt="Foto Dokter Spesialisasi">
+              <img
+                class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full"
+                src="Gambar/spealis-1.jpg" alt="Foto Dokter Spesialisasi">
               <p class="font-semibold font-roboto text-center">Spesialisasi Gigi</p>
             </a>
 
             <a href="informasi-dokter.html"
               class="flex flex-col items-center gap-4 lg:w-[20%] md:w-[20%] w-[40%] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
-              <img class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full" src="Gambar/spealis-2.jpg"
-                alt="Foto Dokter Spesialisasi">
+              <img
+                class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full"
+                src="Gambar/spealis-2.jpg" alt="Foto Dokter Spesialisasi">
               <p class="font-semibold font-roboto text-center">Spesialisasi Bedah</p>
             </a>
 
             <a href="informasi-dokter.html"
-            class="flex flex-col items-center gap-4 lg:w-[20%] md:w-[20%] w-[40%] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
-            <img class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full" src="Gambar/spealis-3.jpg"
-              alt="Foto Dokter Spesialisasi">
-            <p class="font-semibold font-roboto text-center">Spesialisasi Mata</p>
-          </a>
+              class="flex flex-col items-center gap-4 lg:w-[20%] md:w-[20%] w-[40%] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
+              <img
+                class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full"
+                src="Gambar/spealis-3.jpg" alt="Foto Dokter Spesialisasi">
+              <p class="font-semibold font-roboto text-center">Spesialisasi Mata</p>
+            </a>
 
-          <a href="informasi-dokter.html"
-          class="flex flex-col items-center gap-4 lg:w-[20%] w-[40%] md:w-[20%] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
-          <img class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full" src="Gambar/spealis-4.jpg"
-            alt="Foto Dokter Spesialisasi">
-          <p class="font-semibold font-roboto text-center">Spesialisasi Saraf</p>
-        </a>
+            <a href="informasi-dokter.html"
+              class="flex flex-col items-center gap-4 lg:w-[20%] w-[40%] md:w-[20%] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
+              <img
+                class="w-[160px] lg:w-[180px] xl:w-[180px] xl:h-[180px] lg:h-[180px] h-[150px] object-cover rounded-full"
+                src="Gambar/spealis-4.jpg" alt="Foto Dokter Spesialisasi">
+              <p class="font-semibold font-roboto text-center">Spesialisasi Saraf</p>
+            </a>
 
           </div>
         </div>
@@ -381,11 +389,15 @@
             <div class="w-full lg:w-full lg:flex-col flex justify-center items-center flex lg:gap-12 gap-6">
 
               <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
-                <p class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">Iklan</p>
+                <p
+                  class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                  Iklan</p>
               </div>
 
               <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
-                <p class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">Iklan</p>
+                <p
+                  class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                  Iklan</p>
               </div>
 
             </div>
@@ -526,17 +538,21 @@
           <div class="w-auto flex justify-end lg:items-center items-center flex-col">
             <div class="w-full lg:w-full lg:flex-col flex justify-center items-center flex lg:gap-12 gap-6">
 
-              
 
-                <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
-                  <p class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">Iklan</p>
-                </div>
 
-                <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
-                  <p class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">Iklan</p>
-                </div>
+              <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+                <p
+                  class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                  Iklan</p>
+              </div>
 
-                
+              <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+                <p
+                  class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                  Iklan</p>
+              </div>
+
+
 
             </div>
           </div>

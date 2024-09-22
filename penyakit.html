@@ -35,8 +35,8 @@
     }
 
     .background {
-      background: rgb(50,213,134);
-      background: linear-gradient(90deg, rgba(50,213,134,1) 47%, rgba(65,255,196,1) 100%);
+      background: rgb(50, 213, 134);
+      background: linear-gradient(90deg, rgba(50, 213, 134, 1) 47%, rgba(65, 255, 196, 1) 100%);
     }
   </style>
 </head>
@@ -51,17 +51,19 @@
             <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
           </a>
         </div>
-      
+
         <button type="button" id="button-muncul"
           class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
           </svg>
-          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-      
+
         <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
           <a href="index.html"
             class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
@@ -69,23 +71,22 @@
             Beranda
           </a>
           <a href="tentang.html"
-          class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
-            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full" >
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
             Tentang
           </a>
           <a href="artikel.html"
-          class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
-            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full"
-          >
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
             Artikel
           </a>
-      
+
           <a href="penyakit.html"
-          class="relative text-base font-semibold text-[#66BBF8] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300"
-          aria-current="page">
+            class="relative text-base font-semibold text-[#66BBF8] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300"
+            aria-current="page">
             Penyakit
           </a>
-      
+
           <a href="tanya-dokter.html"
             class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
             after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
@@ -97,29 +98,30 @@
             Toko
           </a>
         </div>
-      
+
         <a href="login.html"
           class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
           Daftar / Login
         </a>
       </nav>
-      
-      
+
+
 
       <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
         <div class="flow-root">
           <div class="flex flex-col px-6 -my-2 space-y-1">
             <a href="index.html"
-              class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-gray-600 font-semibold"  >Beranda</a>
+              class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-gray-600 font-semibold">Beranda</a>
             <a href="tentang.html"
               class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tentang</a>
             <a href="artikel.html"
               class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Artikel</a>
             <a href="penyakit.html"
               class="inline-flex py-2 text-base font-medium text-[#66BBF8] font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Penyakit</a>
-              <a href="tanya-dokter.html"
-              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya Dokter</a>
-              <a href="toko.html"
+            <a href="tanya-dokter.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya
+              Dokter</a>
+            <a href="toko.html"
               class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Toko</a>
           </div>
         </div>
@@ -143,7 +145,8 @@
         </div>
         <p class="font-bold text-white text-3xl  poppins leading-[45px]">Cari Pengetahuan Tentang Berbagai Penyakit</p>
         <div class="w-full h-auto flex justify-start items-center gap-6 flex-col">
-          <p class="text-white leading-8">Temukan informasi singkat dan jelas tentang berbagai penyakit, gejala, serta pencegahannya untuk menjaga kesehatan Anda.</p>
+          <p class="text-white leading-8">Temukan informasi singkat dan jelas tentang berbagai penyakit, gejala, serta
+            pencegahannya untuk menjaga kesehatan Anda.</p>
         </div>
       </div>
       <div class="lg:w-[40%] w-[80%] h-full">
@@ -162,7 +165,8 @@
     <div
       class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] h-auto flex justify-start items-start flex-col pt-12 text-gray-700 gap-4">
       <h1 class="font-bold lg:text-3xl text-2xl  poppins text-gray-600">Cari Tentang Penyakit</h1>
-      <p class="font-reguler lg:text-base text-md text-gray-600">Menyediakan beberapa tentang pengetahuan penyakit yang ada</p>
+      <p class="font-reguler lg:text-base text-md text-gray-600">Menyediakan beberapa tentang pengetahuan penyakit yang
+        ada</p>
     </div>
 
     <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] flex items-center justify-center ">
@@ -431,13 +435,17 @@
           <div class=" w-full lg:w-full lg:flex-col flex justify-center items-center flex lg:gap-12 gap-6">
 
             <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
-              <p class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">Iklan</p>
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
             </div>
 
             <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
-              <p class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">Iklan</p>
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
             </div>
-            
+
           </div>
 
 

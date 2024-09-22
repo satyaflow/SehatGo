@@ -122,15 +122,15 @@
     }
 
     .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
 
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
 
     #toast {
@@ -150,168 +150,168 @@
 
 <body class="bg-[#f7f9ff]">
 
- 
-<div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
-  <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative  fade-in bg-[#f7f9ff]" id="checkoutForm">
-    <h2 class="text-2xl font-bold text-gray-800 poppins mb-3">Form Pembelian</h2>
-    <p class="mb-4 text-sm">Isikan data anda untuk konsultasi</p>
-    <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-      <!-- Nama Depan -->
-      <div>
-        <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
-        <input type="text" id="firstName" name="firstName"
-          class=" mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
-          required placeholder="Masukan Nama">
-      </div>
+  <div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
+    <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative  fade-in bg-[#f7f9ff]" id="checkoutForm">
+      <h2 class="text-2xl font-bold text-gray-800 poppins mb-3">Form Pembelian</h2>
+      <p class="mb-4 text-sm">Isikan data anda untuk konsultasi</p>
+      <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-      <!-- Metode Pembayaran -->
-      <div>
-        <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
-        <select id="package" name="package"
-          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
-          required>
-          <option value="" disabled selected>Pilih Metode Pembayaran</option>
-          <option value="basic">Bank Virtual</option>
-          <option value="premium">Cash On Delivery (COD)</option>
-        </select>
-      </div>
-
-      <!-- Email -->
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-        <input type="email" id="email" name="email"
-          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
-          required placeholder="Masukan Email">
-      </div>
-
-      <!-- No Telepon -->
-      <div>
-        <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
-        <input type="tel" id="phone" name="phone"
-          class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
-          required placeholder="Masukan No Telepon">
-      </div>
-
-      <!-- Alamat -->
-      <div class="col-span-2">
-        <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
-        <textarea id="address" name="address" rows="3"
-          class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
-          placeholder="Masukan Alamat" required></textarea>
-      </div>
-
-      <!-- Pesan ke penjual -->
-      <div class="col-span-2">
-        <label for="sellerMessage" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
-        <textarea id="sellerMessage" name="sellerMessage" rows="3"
-          class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
-          placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
-      </div>
-
-      <h1 class="col-span-2 text-lg font-semibold mt-3">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
-      </h1>
-
-      <!-- Button Actions -->
-      <div class="col-span-2 flex justify-between items-center mt-3">
-        <button type="submit"
-          class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
-          Pesan
-        </button>
-        <button type="button"
-          class="closeForm w-[48%] bg-gray-800 hover:bg-black hover:bg-red-700 duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
-          Batal
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-<header class="pb-0  bg-white lg:pb-0 fixed w-full shadow-md z-10">
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <nav class="flex items-center justify-between h-16 lg:h-20">
-      <div class="flex-shrink-0 ">
-        <a href="index.html" class="flex">
-          <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
-        </a>
-      </div>
-
-      <button type="button" id="button-muncul"
-        class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
-        <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-        </svg>
-        <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-
-      <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
-        <a href="index.html"
-          class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full"
-          >
-          Beranda
-        </a>
-        <a href="tentang.html"
-          class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
-          Tentang
-        </a>
-        <a href="artikel.html"
-          class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
-          Artikel
-        </a>
-
-        <a href="penyakit.html"
-          class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
-          Penyakit
-        </a>
-
-        <a href="tanya-dokter.html"
-          class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
-          Tanya Dokter
-        </a>
-        <a href="toko.html"
-          class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
-          Toko
-        </a>
-      </div>
-
-
-
-      <a href="login.html"
-        class="hidden px-4 py-3 ml-10 text-base font-semibold font-roboto text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
-        Daftar / Login
-      </a>
-    </nav>
-
-    <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
-      <div class="flow-root">
-        <div class="flex flex-col px-6 -my-2 space-y-1">
-          <a href="index.html"
-            class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-gray-600 font-semibold"  >Beranda</a>
-          <a href="tentang.html"
-            class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tentang</a>
-          <a href="artikel.html"
-            class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Artikel</a>
-          <a href="penyakit.html"
-            class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Penyakit</a>
-            <a href="tanya-dokter.html"
-            class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya Dokter</a>
-            <a href="toko.html"
-            class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Toko</a>
+        <!-- Nama Depan -->
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
+          <input type="text" id="firstName" name="firstName"
+            class=" mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required placeholder="Masukan Nama">
         </div>
-      </div>
-      <div class="px-6 mt-6">
-        <a href="login.html"
-          class="inline-flex justify-center px-4 py-3 text-base font-semibold font-roboto text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md  hover:bg-[#5AADE3]">Daftar
-          / Login</a>
-      </div>
-    </nav>
+
+        <!-- Metode Pembayaran -->
+        <div>
+          <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
+          <select id="package" name="package"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required>
+            <option value="" disabled selected>Pilih Metode Pembayaran</option>
+            <option value="basic">Bank Virtual</option>
+            <option value="premium">Cash On Delivery (COD)</option>
+          </select>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required placeholder="Masukan Email">
+        </div>
+
+        <!-- No Telepon -->
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
+          <input type="tel" id="phone" name="phone"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required placeholder="Masukan No Telepon">
+        </div>
+
+        <!-- Alamat -->
+        <div class="col-span-2">
+          <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
+          <textarea id="address" name="address" rows="3"
+            class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            placeholder="Masukan Alamat" required></textarea>
+        </div>
+
+        <!-- Pesan ke penjual -->
+        <div class="col-span-2">
+          <label for="sellerMessage" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
+          <textarea id="sellerMessage" name="sellerMessage" rows="3"
+            class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
+        </div>
+
+        <h1 class="col-span-2 text-lg font-semibold mt-3">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
+        </h1>
+
+        <!-- Button Actions -->
+        <div class="col-span-2 flex justify-between items-center mt-3">
+          <button type="submit"
+            class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+            Pesan
+          </button>
+          <button type="button"
+            class="closeForm w-[48%] bg-gray-800 hover:bg-black hover:bg-red-700 duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+            Batal
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-</header>
+
+
+  <header class="pb-0  bg-white lg:pb-0 fixed w-full shadow-md z-10">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex-shrink-0 ">
+          <a href="index.html" class="flex">
+            <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
+          </a>
+        </div>
+
+        <button type="button" id="button-muncul"
+          class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
+          <a href="index.html"
+            class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Beranda
+          </a>
+          <a href="tentang.html"
+            class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tentang
+          </a>
+          <a href="artikel.html"
+            class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Artikel
+          </a>
+
+          <a href="penyakit.html"
+            class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Penyakit
+          </a>
+
+          <a href="tanya-dokter.html"
+            class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tanya Dokter
+          </a>
+          <a href="toko.html"
+            class="relative text-base font-semibold font-roboto text-gray-600 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Toko
+          </a>
+        </div>
+
+
+
+        <a href="login.html"
+          class="hidden px-4 py-3 ml-10 text-base font-semibold font-roboto text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+          Daftar / Login
+        </a>
+      </nav>
+
+      <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
+        <div class="flow-root">
+          <div class="flex flex-col px-6 -my-2 space-y-1">
+            <a href="index.html"
+              class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-gray-600 font-semibold">Beranda</a>
+            <a href="tentang.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tentang</a>
+            <a href="artikel.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Artikel</a>
+            <a href="penyakit.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Penyakit</a>
+            <a href="tanya-dokter.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya
+              Dokter</a>
+            <a href="toko.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Toko</a>
+          </div>
+        </div>
+        <div class="px-6 mt-6">
+          <a href="login.html"
+            class="inline-flex justify-center px-4 py-3 text-base font-semibold font-roboto text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md  hover:bg-[#5AADE3]">Daftar
+            / Login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <div class="w-full h-auto flex justify-center items-center bg-[#f7f9ff] flex-col gap-8 pt-20">
 
@@ -356,22 +356,24 @@
   <div class="w-full h-auto pt-4 pb-8 flex justify-center items-center">
     <div
       class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-auto flex justify-start items-center flex-col rounded-lg shadow-sm bg-white py-8">
-  
-      <div class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+
+      <div
+        class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
         <div class="w-auto flex justify-center items-center gap-x-4">
           <input type="checkbox" class="scale-150">
           <a href="informasi-belanja.html">
             <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
           </a>
-  
+
           <div class="flex flex-col justify-start items-start w-[150px]">
             <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
             <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
           </div>
-  
+
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
-            <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+            <select
+              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -379,39 +381,43 @@
             </select>
           </div>
         </div>
-  
+
         <div class="flex justify-between items-center w-auto gap-x-16">
           <p class="text-sm font-medium text-gray-500 w-[23%]" data-price="100000">Rp.100.000</p>
-  
+
           <div class="flex items-center justify-center w-[23%]">
             <button class="minus-btn py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
-            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]" value="1">
+            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]"
+              value="1">
             <button class="plus-btn py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
           </div>
-  
+
           <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
-  
-          <button class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+
+          <button
+            class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
         </div>
       </div>
-  
+
       <hr class="w-full border-t-2 border-gray-200">
 
-      <div class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+      <div
+        class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
         <div class="w-auto flex justify-center items-center gap-x-4">
           <input type="checkbox" class="scale-150">
           <a href="informasi-belanja.html">
             <img src="Gambar/sirup-2.jpg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
           </a>
-  
+
           <div class="flex flex-col justify-start items-start w-[150px]">
             <h2 class="text-[13px] font-medium text-gray-800">Sari Pati Ayam</h2>
             <p class="text-[10px] font-medium text-gray-600">Obat sehat semangat tepercaya</p>
           </div>
-  
+
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
-            <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+            <select
+              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -419,39 +425,43 @@
             </select>
           </div>
         </div>
-  
+
         <div class="flex justify-between items-center w-auto gap-x-16">
           <p class="text-sm font-medium text-gray-500 w-[23%]" data-price="100000">Rp.100.000</p>
-  
+
           <div class="flex items-center justify-center w-[23%]">
             <button class="minus-btn py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
-            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]" value="1">
+            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]"
+              value="1">
             <button class="plus-btn py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
           </div>
-  
+
           <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
-  
-          <button class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+
+          <button
+            class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
         </div>
       </div>
-  
+
       <hr class="w-full border-t-2 border-gray-200">
 
-      <div class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+      <div
+        class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
         <div class="w-auto flex justify-center items-center gap-x-4">
           <input type="checkbox" class="scale-150">
           <a href="informasi-belanja.html">
             <img src="Gambar/tolak-2.png" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
           </a>
-  
+
           <div class="flex flex-col justify-start items-start w-[150px]">
             <h2 class="text-[13px] font-medium text-gray-800">Tolak Angin</h2>
             <p class="text-[10px] font-medium text-gray-600">Obat menolak angin tepercaya</p>
           </div>
-  
+
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
-            <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+            <select
+              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -459,39 +469,43 @@
             </select>
           </div>
         </div>
-  
+
         <div class="flex justify-between items-center w-auto gap-x-16">
           <p class="text-sm font-medium text-gray-500 w-[23%]" data-price="100000">Rp.100.000</p>
-  
+
           <div class="flex items-center justify-center w-[23%]">
             <button class="minus-btn py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
-            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]" value="1">
+            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]"
+              value="1">
             <button class="plus-btn py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
           </div>
-  
+
           <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
-  
-          <button class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+
+          <button
+            class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
         </div>
       </div>
-  
+
       <hr class="w-full border-t-2 border-gray-200">
 
-      <div class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+      <div
+        class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
         <div class="w-auto flex justify-center items-center gap-x-4">
           <input type="checkbox" class="scale-150">
           <a href="informasi-belanja.html">
             <img src="Gambar/teh-1.png" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
           </a>
-  
+
           <div class="flex flex-col justify-start items-start w-[150px]">
             <h2 class="text-[13px] font-medium text-gray-800">Slimming Tea</h2>
             <p class="text-[10px] font-medium text-gray-600">teh meningkatkan imun tubuh</p>
           </div>
-  
+
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
-            <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+            <select
+              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -499,39 +513,43 @@
             </select>
           </div>
         </div>
-  
+
         <div class="flex justify-between items-center w-auto gap-x-16">
           <p class="text-sm font-medium text-gray-500 w-[23%]" data-price="100000">Rp.100.000</p>
-  
+
           <div class="flex items-center justify-center w-[23%]">
             <button class="minus-btn py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
-            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]" value="1">
+            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]"
+              value="1">
             <button class="plus-btn py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
           </div>
-  
+
           <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
-  
-          <button class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+
+          <button
+            class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
         </div>
       </div>
-  
+
       <hr class="w-full border-t-2 border-gray-200">
 
-      <div class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+      <div
+        class="cart-item w-full flex items-center justify-between pr-6 pl-8 py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
         <div class="w-auto flex justify-center items-center gap-x-4">
           <input type="checkbox" class="scale-150">
           <a href="informasi-belanja.html">
             <img src="Gambar/susu-1.png" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
           </a>
-  
+
           <div class="flex flex-col justify-start items-start w-[150px]">
             <h2 class="text-[13px] font-medium text-gray-800">Susu D.A</h2>
             <p class="text-[10px] font-medium text-gray-600">Susu kambing etawalin</p>
           </div>
-  
+
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
-            <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+            <select
+              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Sachet</option>
               <option value="tablet">20 Sachet</option>
               <option value="tablet">30 Sachet</option>
@@ -539,22 +557,24 @@
             </select>
           </div>
         </div>
-  
+
         <div class="flex justify-between items-center w-auto gap-x-16">
           <p class="text-sm font-medium text-gray-500 w-[23%]" data-price="100000">Rp.100.000</p>
-  
+
           <div class="flex items-center justify-center w-[23%]">
             <button class="minus-btn py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
-            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]" value="1">
+            <input type="text" class="value border-2 text-lg font-bold text-gray-500 w-[50px] py-[3px] px-[15px]"
+              value="1">
             <button class="plus-btn py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
           </div>
-  
+
           <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
-  
-          <button class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+
+          <button
+            class="remove-btn bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
         </div>
       </div>
-  
+
       <hr class="w-full border-t-2 border-gray-200">
 
 
@@ -579,7 +599,7 @@
 
     </div>
   </div>
-  
+
 
   <section class="py-10 sm:pt-16 lg:pt-24 bg-white">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -738,108 +758,108 @@
 
   <script>
 
-const button = document.getElementById('button-muncul');
-  const menu = document.getElementById('muncul');
+    const button = document.getElementById('button-muncul');
+    const menu = document.getElementById('muncul');
 
-  button.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-const consultButtons = document.querySelectorAll('.consultButton');
-const checkoutForms = document.querySelectorAll('.checkoutForm');
-const closeForms = document.querySelectorAll('.closeForm');
-
-// Menampilkan form ketika tombol konsultasi ditekan
-consultButtons.forEach(button => {
-  button.addEventListener('click', function () {
-    checkoutForms.forEach(form => {
-      form.classList.remove('hidden');
-      showCheckoutForm(); // Panggil fungsi untuk menampilkan form
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
     });
-  });
-});
 
-// Menyembunyikan form ketika tombol tutup ditekan
-closeForms.forEach(button => {
-  button.addEventListener('click', function () {
-    checkoutForms.forEach(form => closeCheckoutForm()); // Panggil fungsi untuk menyembunyikan form
-  });
-});
+    const consultButtons = document.querySelectorAll('.consultButton');
+    const checkoutForms = document.querySelectorAll('.checkoutForm');
+    const closeForms = document.querySelectorAll('.closeForm');
 
-// Fungsi untuk memperbarui total belanja
-function updateTotal() {
-  let total = 0;
-  document.querySelectorAll('.cart-item').forEach((item) => {
-    const price = parseInt(item.querySelector('[data-price]').getAttribute('data-price'));
-    const quantity = parseInt(item.querySelector('.value').value);
-    total += price * quantity;
-  });
-  document.querySelector('#total-belanja').textContent = `Rp.${total.toLocaleString()}`;
-}
+    // Menampilkan form ketika tombol konsultasi ditekan
+    consultButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        checkoutForms.forEach(form => {
+          form.classList.remove('hidden');
+          showCheckoutForm(); // Panggil fungsi untuk menampilkan form
+        });
+      });
+    });
 
-// Event listener untuk tombol -
-document.querySelectorAll('.minus-btn').forEach((button) => {
-  button.addEventListener('click', function() {
-    const input = this.nextElementSibling; // Ambil input jumlah
-    let value = parseInt(input.value);
-    if (value > 1) {
-      value--; // Kurangi nilai
-      input.value = value;
-      updateTotal(); // Memperbarui total belanja
+    // Menyembunyikan form ketika tombol tutup ditekan
+    closeForms.forEach(button => {
+      button.addEventListener('click', function () {
+        checkoutForms.forEach(form => closeCheckoutForm()); // Panggil fungsi untuk menyembunyikan form
+      });
+    });
+
+    // Fungsi untuk memperbarui total belanja
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll('.cart-item').forEach((item) => {
+        const price = parseInt(item.querySelector('[data-price]').getAttribute('data-price'));
+        const quantity = parseInt(item.querySelector('.value').value);
+        total += price * quantity;
+      });
+      document.querySelector('#total-belanja').textContent = `Rp.${total.toLocaleString()}`;
     }
-  });
-});
 
-// Event listener untuk tombol +
-document.querySelectorAll('.plus-btn').forEach((button) => {
-  button.addEventListener('click', function() {
-    const input = this.previousElementSibling; // Ambil input jumlah
-    let value = parseInt(input.value);
-    value++; // Tambah nilai
-    input.value = value;
-    updateTotal(); // Memperbarui total belanja
-  });
-});
+    // Event listener untuk tombol -
+    document.querySelectorAll('.minus-btn').forEach((button) => {
+      button.addEventListener('click', function () {
+        const input = this.nextElementSibling; // Ambil input jumlah
+        let value = parseInt(input.value);
+        if (value > 1) {
+          value--; // Kurangi nilai
+          input.value = value;
+          updateTotal(); // Memperbarui total belanja
+        }
+      });
+    });
 
-// Event listener untuk tombol hapus
-document.querySelectorAll('.remove-btn').forEach((button) => {
-  button.addEventListener('click', function() {
-    const cartItem = this.closest('.cart-item'); // Ambil elemen item keranjang
-    cartItem.remove(); // Hapus item dari DOM
-    updateTotal(); // Memperbarui total belanja
-  });
-});
+    // Event listener untuk tombol +
+    document.querySelectorAll('.plus-btn').forEach((button) => {
+      button.addEventListener('click', function () {
+        const input = this.previousElementSibling; // Ambil input jumlah
+        let value = parseInt(input.value);
+        value++; // Tambah nilai
+        input.value = value;
+        updateTotal(); // Memperbarui total belanja
+      });
+    });
 
-// Inisialisasi total saat halaman dimuat
-updateTotal();
+    // Event listener untuk tombol hapus
+    document.querySelectorAll('.remove-btn').forEach((button) => {
+      button.addEventListener('click', function () {
+        const cartItem = this.closest('.cart-item'); // Ambil elemen item keranjang
+        cartItem.remove(); // Hapus item dari DOM
+        updateTotal(); // Memperbarui total belanja
+      });
+    });
 
-// Fungsi untuk menampilkan form
-function showCheckoutForm() {
-  const form = document.getElementById('checkoutForm');
-  form.classList.remove('hidden');
-  setTimeout(() => {
-    form.classList.add('show');
-  }, 10); // Delay sedikit untuk memicu transisi
-}
+    // Inisialisasi total saat halaman dimuat
+    updateTotal();
 
-// Fungsi untuk menyembunyikan form
-function closeCheckoutForm() {
-  checkoutForms.forEach(form => {
-    form.classList.remove('show');
-    setTimeout(() => {
-      form.classList.add('hidden');
-    }, 10); // Tunggu hingga animasi selesai
-  });
-}
+    // Fungsi untuk menampilkan form
+    function showCheckoutForm() {
+      const form = document.getElementById('checkoutForm');
+      form.classList.remove('hidden');
+      setTimeout(() => {
+        form.classList.add('show');
+      }, 10); // Delay sedikit untuk memicu transisi
+    }
 
-// Event listener untuk tombol batal
-// Pastikan ada elemen dengan kelas .closeForm
-closeForms.forEach(button => {
-  button.addEventListener('click', closeCheckoutForm); // Panggil fungsi untuk menyembunyikan form
-});
+    // Fungsi untuk menyembunyikan form
+    function closeCheckoutForm() {
+      checkoutForms.forEach(form => {
+        form.classList.remove('show');
+        setTimeout(() => {
+          form.classList.add('hidden');
+        }, 10); // Tunggu hingga animasi selesai
+      });
+    }
 
-// Contoh untuk memanggil fungsi showCheckoutForm ketika ingin membuka form
-// showCheckoutForm();
+    // Event listener untuk tombol batal
+    // Pastikan ada elemen dengan kelas .closeForm
+    closeForms.forEach(button => {
+      button.addEventListener('click', closeCheckoutForm); // Panggil fungsi untuk menyembunyikan form
+    });
+
+    // Contoh untuk memanggil fungsi showCheckoutForm ketika ingin membuka form
+    // showCheckoutForm();
 
 
   </script>
