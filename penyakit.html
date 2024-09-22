@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penyakit - Sehat Go</title>
+
+  <link rel="icon" type="image/png" href="/Gambar/logo-sehatgo.png">
+
+  <link rel="stylesheet" href="src/output.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .text-judul {
+      color: rgb(121, 121, 121);
+    }
+
+    .hijau {
+      background-color: #2DD8A3;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .background {
+      background: rgb(50, 213, 134);
+      background: linear-gradient(90deg, rgba(50, 213, 134, 1) 47%, rgba(65, 255, 196, 1) 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="pb-0  bg-white lg:pb-0 fixed w-full shadow-md z-10">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 font">
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex">
+            <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
+          </a>
+        </div>
+
+        <button type="button" id="button-muncul"
+          class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
+          <a href="index.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Beranda
+          </a>
+          <a href="tentang.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tentang
+          </a>
+          <a href="artikel.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Artikel
+          </a>
+
+          <a href="penyakit.html"
+            class="relative text-base font-semibold text-[#66BBF8] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300"
+            aria-current="page">
+            Penyakit
+          </a>
+
+          <a href="tanya-dokter.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tanya Dokter
+          </a>
+          <a href="toko.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Toko
+          </a>
+        </div>
+
+        <a href="login.html"
+          class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+          Daftar / Login
+        </a>
+      </nav>
+
+
+
+      <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
+        <div class="flow-root">
+          <div class="flex flex-col px-6 -my-2 space-y-1">
+            <a href="index.html"
+              class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-gray-600 font-semibold">Beranda</a>
+            <a href="tentang.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tentang</a>
+            <a href="artikel.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Artikel</a>
+            <a href="penyakit.html"
+              class="inline-flex py-2 text-base font-medium text-[#66BBF8] font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Penyakit</a>
+            <a href="tanya-dokter.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya
+              Dokter</a>
+            <a href="toko.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Toko</a>
+          </div>
+        </div>
+        <div class="px-6 mt-6">
+          <a href="login.html"
+            class="inline-flex justify-center px-4 py-3 text-base font-semibold font-roboto text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md  hover:bg-[#5AADE3]">Daftar
+            / Login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="pt-16 h-auto background flex justify-center items-center">
+    <div
+      class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%]  w-full h-full flex justify-between items-center flex-col lg:flex-row py-12">
+      <div class="lg:w-[55%] w-[80%] h-full flex justify-center items-start flex-col gap-2">
+        <div class="w-auto h-auto flex justify-start items-center gap-3 text-white font-semibold text-lg">
+          <a href="index.html">Beranda</a>
+          <p>/</p>
+          <a href="index.html">Penyakit</a>
+        </div>
+        <p class="font-bold text-white text-3xl  poppins leading-[45px]">Cari Pengetahuan Tentang Berbagai Penyakit</p>
+        <div class="w-full h-auto flex justify-start items-center gap-6 flex-col">
+          <p class="text-white leading-8">Temukan informasi singkat dan jelas tentang berbagai penyakit, gejala, serta
+            pencegahannya untuk menjaga kesehatan Anda.</p>
+        </div>
+      </div>
+      <div class="lg:w-[40%] w-[80%] h-full">
+        <img class="w-full h-full bg-cover" src="Gambar/dokter-2.png" alt="Foto Dokter">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="w-full h-auto flex justify-center items-center bg-[#f7f9ff] flex-col gap-8">
+
+    <div
+      class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] h-auto flex justify-start items-start flex-col pt-12 text-gray-700 gap-4">
+      <h1 class="font-bold lg:text-3xl text-2xl  poppins text-gray-600">Cari Tentang Penyakit</h1>
+      <p class="font-reguler lg:text-base text-md text-gray-600">Menyediakan beberapa tentang pengetahuan penyakit yang
+        ada</p>
+    </div>
+
+    <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] flex items-center justify-center ">
+      <input class="lg:w-[88%] w-[75%] bg-white lg:py-5 py-4 px-4 rounded-l-md flex justify-between items-center"
+        placeholder="Cari Penyakit">
+      </input>
+      <button class="lg:w-[12%] w-[25%] lg:py-5 py-3 rounded-r-lg hijau flex items-center justify-center">
+        <p class="text-white text-base text-xl font-medium">Cari</p>
+      </button>
+    </div>
+
+
+
+
+    <div
+      class="2xl:w-[65%] xl:w-[80%] lg:w-[90%] w-[100%] h-auto mb-12 mt-6 flex justify-center lg:items-start items-center flex-col lg:flex-row">
+      <div class="lg:w-[70%] w-[90%] flex items-strat justify-start flex-col gap-4 ">
+
+
+        <h1 class="font-bold lg:text-3xl text-2xl text-gray-700 mb-6  poppins text-gray-600">Cari Penyakit Berdasarkan
+          Ajab</h1>
+
+        <div class="w-full h-full flex justify-start items-center flex-wrap gap-6 ">
+          <!-- Loop dari A sampai Z -->
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">A</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">B</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">C</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">D</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">E</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">F</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">G</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">H</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">I</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">J</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">K</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">L</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">M</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">N</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">O</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">P</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">Q</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">R</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">S</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">T</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">U</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">V</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">W</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">X</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">Y</a>
+          <a href="#"
+            class="w-[50px] h-[50px] flex justify-center items-center font-semibold border-2 bg-white hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">Z</a>
+        </div>
+
+        <h1 class="font-bold lg:text-3xl text-2xl  poppins text-gray-600 mt-16">Daftar Penyakit</h1>
+        <p class=" text-base text-gray-700 mb-8 ">Cari data pengetahuan tentang tentang penyakit </p>
+
+        <div class="w-full h-auto flex justify-start items-center flex-wrap gap-6 lg:gap-x-24 md:gap-x-16 gap-6">
+
+          <!-- Huruf A -->
+          <a href="Penyakit/anemia.html"
+            class=" lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Anemia</a>
+          <a href="Penyakit/asthma.html"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Asthma</a>
+
+          <!-- Huruf B -->
+          <a href="Penyakit/batuk.html"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Batuk</a>
+          <a href="Penyakit/bersin.html"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Bersin</a>
+
+          <!-- Huruf C -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Celiac
+            Disease</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Cholera</a>
+
+          <!-- Huruf D -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Dengue</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Diabetes</a>
+
+          <!-- Huruf E -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Ebola</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Encephalitis</a>
+
+          <!-- Huruf F -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Flu</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Fibromyalgia</a>
+
+          <!-- Huruf G -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Gout</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Glaucoma</a>
+
+
+          <!-- Huruf H -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Hepatitis</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Hypertension</a>
+
+          <!-- Huruf I -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Influenza</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Irritable
+            Bowel Syndrome</a>
+
+          <!-- Huruf J -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Jaundice</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Juvenile
+            Arthritis</a>
+
+          <!-- Huruf K -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Kidney
+            Disease</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Keratitis</a>
+
+          <!-- Huruf L -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Leukemia</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Lupus</a>
+
+          <!-- Huruf M -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Malaria</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Meningitis</a>
+
+          <!-- Huruf N -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Nausea</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Nephritis</a>
+
+          <!-- Huruf O -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Osteoporosis</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Otitis
+            Media</a>
+
+          <!-- Huruf P -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Pneumonia</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Psoriasis</a>
+
+          <!-- Huruf Q -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Q
+            Fever</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Quinsy</a>
+
+          <!-- Huruf R -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Rabies</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Rheumatoid
+            Arthritis</a>
+
+          <!-- Huruf S -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Syphilis</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Sinusitis</a>
+
+          <!-- Huruf T -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Tuberculosis</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Tetanus</a>
+
+          <!-- Huruf U -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Ulcerative
+            Colitis</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Urethritis</a>
+
+          <!-- Huruf V -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Varicella</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Vasculitis</a>
+
+          <!-- Huruf W -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Whooping
+            Cough</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Wilson's
+            Disease</a>
+
+          <!-- Huruf X -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Xeroderma
+            Pigmentosum</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Xanthomatosis</a>
+
+          <!-- Huruf Y -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Yellow
+            Fever</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Yaws</a>
+
+          <!-- Huruf Z -->
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Zika
+            Virus</a>
+          <a href="#"
+            class="lg:w-[40%] w-[45%] h-[60px] hover:shadow-md flex justify-center items-center bg-white font-semibold border-2 hover:bg-emerald-300 hover:text-white rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300 text-gray-600 md:text-xl text-md text-center">Zollinger-Ellison
+            Syndrome</a>
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="2xl:w-[30%]  lg:w-[30%]  w-full pt-16">
+        <div class="w-auto px-10 flex justify-center lg:items-start items-center  flex-col">
+          <div class=" w-full lg:w-full lg:flex-col flex justify-center items-center flex lg:gap-12 gap-6">
+
+            <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
+            </div>
+
+            <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+  <section class="py-10 sm:pt-16 lg:pt-24 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
+        <div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
+          <a href="index.html">
+            <img class="w-auto h-[50px]" src="Gambar/Logo.png" alt="Logo SehatGo" />
+          </a>
+
+          <p class="text-justify leading-relaxed text-gray-600 mt-5 font-roboto">
+            SehatGo adalah platform kesehatan yang menawarkan solusi fleksibel dan personal untuk memenuhi kebutuhan
+            unik setiap individu.
+          </p>
+
+          <ul class="flex items-center space-x-3 mt-8">
+            <li>
+              <a href="#" title=""
+                class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" title=""
+                class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" title=""
+                class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z">
+                  </path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold tracking-widest text-gray-700 uppercase font-roboto">
+            SehatGo
+          </p>
+
+          <ul class="mt-6 space-y-4">
+            <li>
+              <a href="index.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Beranda
+              </a>
+            </li>
+
+            <li>
+              <a href="tentang.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Tentang
+              </a>
+            </li>
+
+            <li>
+              <a href="artikel.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Artikel
+              </a>
+            </li>
+
+            <li>
+              <a href="login.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Daftar / Login
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold text-gray-700 tracking-widest text-gray-400 uppercase font-roboto">
+            Lainnya
+          </p>
+
+          <ul class="mt-6 space-y-4">
+            <li>
+              <a href="toko.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Toko
+              </a>
+            </li>
+
+            <li>
+              <a href="informasi-dokter.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Buat Janji
+              </a>
+            </li>
+
+            <li>
+              <a href="tanya-dokter.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Tanya Dokter
+              </a>
+            </li>
+
+            <li>
+              <a href="penyakit.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Penyakit
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+          <p class="text-sm font-semibold tracking-widest text-gray-700 uppercase font-roboto">
+            Ikuti Kami Untuk Berita Baru
+          </p>
+
+          <form action="#" method="POST" class="mt-6">
+            <div>
+              <label for="email" class="sr-only font-roboto">Email</label>
+              <input type="email" name="email" id="email" placeholder="Masukan Email"
+                class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
+            </div>
+
+            <button type="submit"
+              class="inline-flex items-center font-roboto justify-center px-16 py-4 mt-6 font-semibold text-white transition-all duration-200 hijau rounded-md hover:bg-white focus:bg-white hover:text-black hover:ring hover:ring-emerald-400">
+              Ikuti
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="mt-16 mb-10 border-gray-200" />
+
+      <p class="text-sm text-center text-gray-600 font-roboto">
+        © Copyright 2021, All Rights Reserved by SehatGo
+      </p>
+    </div>
+  </section>
+</body>
+
+</html>
+
+<script>
+  const button = document.getElementById('button-muncul');
+  const menu = document.getElementById('muncul');
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+
+</html>
