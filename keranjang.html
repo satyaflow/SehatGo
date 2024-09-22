@@ -129,6 +129,83 @@
 
 <body class="bg-[#f7f9ff] font-sans">
 
+  <!-- Fullscreen Checkout Form -->
+  <div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
+    <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative bg-white fade-in">
+      <h2 class="text-2xl font-bold text-gray-800 poppins mb-3">Form Pembelian</h2>
+      <p class="mb-4 text-sm">Isikan data anda untuk konsultasi</p>
+      <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- Nama Depan -->
+        <div>
+          <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
+          <input type="text" id="firstName" name="firstName"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required placeholder="Masukan Nama">
+        </div>
+
+        <!-- Metode Pembayaran -->
+        <div>
+          <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
+          <select id="package" name="package"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required>
+            <option value="" disabled selected>Pilih Metode Pembayaran</option>
+            <option value="basic">Bank Virtual</option>
+            <option value="premium">Cash On Delivery (COD)</option>
+          </select>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required placeholder="Masukan Email">
+        </div>
+
+        <!-- No Telepon -->
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
+          <input type="tel" id="phone" name="phone"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            required placeholder="Masukan No Telepon">
+        </div>
+
+        <!-- Alamat -->
+        <div class="col-span-2">
+          <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
+          <textarea id="address" name="address" rows="2"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            placeholder="Masukan Alamat" required></textarea>
+        </div>
+
+        <!-- Pesan ke penjual -->
+        <div class="col-span-2">
+          <label for="sellerMessage" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
+          <textarea id="sellerMessage" name="sellerMessage" rows="2"
+            class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
+        </div>
+
+        <h1 class="col-span-2 text-lg font-semibold mt-3">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
+        </h1>
+
+        <!-- Button Actions -->
+        <div class="col-span-2 flex justify-between items-center mt-3">
+          <button type="submit"
+            class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+            Pesan
+          </button>
+          <button type="button"
+            class="closeForm w-[48%] bg-red-600 hover:bg-red-700 duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+            Batal
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
     <header class="pb-0 bg-white lg:pb-0 fixed top-0 w-full shadow-md z-10">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <nav class="flex items-center justify-between h-16 lg:h-20">
@@ -190,141 +267,411 @@
             </nav>
         </div>
     </header>
+
+
+    <div class="w-full h-auto flex justify-center items-center bg-[#f7f9ff] flex-col gap-8 pt-20">
+
+      <div
+      class="lg:w-[90%] xl:w-[80%] 2xl:w-[70%] w-[90%] h-auto flex justify-start items-start flex-col pt-12 text-gray-700 gap-4">
+      <h1 class="font-bold lg:text-3xl text-2xl  poppins text-gray-700">Cari Produk Lainnya</h1>
+      <p class="font-reguler lg:text-base text-md text-gray-600">Checkout Barang Anda  </p>
+    </div>
+
+    <div class="lg:w-[90%] xl:w-[80%] 2xl:w-[70%] w-[90%] flex items-center justify-center ">
+      <input class="lg:w-[88%] w-[75%] bg-white lg:py-5 py-4 px-4 rounded-l-md flex justify-between items-center"
+        placeholder="Cari Penyakit">
+      </input>
+      <button class="lg:w-[12%] w-[25%] lg:py-4 py-3 rounded-r-lg hijau flex items-center justify-center">
+        <p class="text-white text-base text-xl font-medium">Cari</p>
+      </button>
+    </div>
+
+    </div>
+
+    <div class="w-full h-auto pt-12 flex justify-center items-center ">
+      <div class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-[60px] px-8 flex justify-between items-center p-6 rounded-lg shadow-sm bg-white overflow-x-auto">
+        
+        <div class="flex justify-start items-center w-[1000px] gap-x-4">
+          <input type="checkbox" class="scale-150">
+          <p class="font-semibold text-lg text-gray-600">Produk</p>
+          <div class="w-[200px]"></div>
+        </div>
     
-    <main class="mt-20 mb-10 lg:mt-20 lg:mb-16">
-        <section>
+        <div class="flex justify-between items-center lg:w-[550px]  gap-16">
+          <p class="text-sm font-medium text-gray-500 w-[90px] flex items-center justify-center">Harga Satuan</p>
+          <p class="text-sm font-medium text-gray-500 w-[80px] flex items-center justify-center">Kuantitas</p>
+          <p class="text-sm font-medium text-gray-500 w-[85px] flex items-center justify-center">Total Harga</p>
+          <p class="text-sm font-medium text-gray-500 w-[85px] flex items-center justify-center">Aksi</p>
+        </div>
+        
+      </div>
+    </div>
+    
 
-          <div class="mt-8">
-            <div class="bg-white rounded-md shadow-md w-[80%] mx-auto p-6">
-              <div class="flex flex-col items-start">
-                <h1 class="text-3xl font-bold text-gray-800">Keranjang Belanja</h1>
-                <p class="text-md text-gray-600 mt-2 mb-6">
-                  Jelajahi pilihan obat tambahan untuk kebutuhan kesehatan Anda, termasuk suplemen, vitamin, dan obat herbal yang sesuai dengan gaya hidup sehat.
-                </p>
-              </div>
-          
-              <div class="flex flex-col md:flex-row items-center justify-between mt-4">
-                <div class="flex items-center w-full md:w-2/3">
-                  <input
-                    class="flex-grow bg-[#f7f9ff] py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] transition duration-200"
-                    placeholder="Cari Penyakit"
-                  />
-                  <button class="ml-4 bg-[#2DD8A3] hover:bg-[#28c091] text-white font-medium py-2 px-4 rounded-md transition duration-200">
-                    Cari
-                  </button>
-                </div>
-                <div class="mt-4 md:mt-0 md:w-1/3 flex items-center justify-end">
-                  <span class="text-lg font-bold text-gray-800">Total: <span id="total">Rp 1.000.000</span></span>
-                  <button class="ml-4 bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold py-2 px-4 rounded-md transition duration-200" id="checkout">
-                    Checkout
-                  </button>
-                </div>
-              </div>
+
+    <div class="w-full h-auto pt-4 pb-8 flex justify-center items-center">
+      <div class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-auto flex justify-start items-center flex-col  rounded-lg shadow-sm bg-white py-8">
+
+        
+
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
             </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
           </div>
-          
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                
-              
-                <!-- Card Section -->
-                <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    <!-- Product 1 -->
-                    <div class="item-card relative p-4 bg-white rounded-lg shadow-md">
-                        <img src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Produk 1" class="w-full h-40 object-cover rounded-md" />
-                        <div class="mt-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Produk 1</h2>
-                            <p class="text-base text-gray-600">Deskripsi singkat produk 1.</p>
-                            <span class="block mt-2 text-lg font-bold text-gray-800">Rp 100.000</span>
-                        </div>
-                        <button class="btn-remove" aria-label="Hapus dari keranjang">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="item-card relative p-4 bg-white rounded-lg shadow-md">
-                        <img src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Produk 2" class="w-full h-40 object-cover rounded-md" />
-                        <div class="mt-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Produk 2</h2>
-                            <p class="text-base text-gray-600">Deskripsi singkat produk 2.</p>
-                            <span class="block mt-2 text-lg font-bold text-gray-800">Rp 150.000</span>
-                        </div>
-                        <button class="btn-remove" aria-label="Hapus dari keranjang">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="item-card relative p-4 bg-white rounded-lg shadow-md">
-                        <img src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Produk 3" class="w-full h-40 object-cover rounded-md" />
-                        <div class="mt-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Produk 3</h2>
-                            <p class="text-base text-gray-600">Deskripsi singkat produk 3.</p>
-                            <span class="block mt-2 text-lg font-bold text-gray-800">Rp 200.000</span>
-                        </div>
-                        <button class="btn-remove" aria-label="Hapus dari keranjang">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="item-card relative p-4 bg-white rounded-lg shadow-md">
-                        <img src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Produk 4" class="w-full h-40 object-cover rounded-md" />
-                        <div class="mt-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Produk 4</h2>
-                            <p class="text-base text-gray-600">Deskripsi singkat produk 4.</p>
-                            <span class="block mt-2 text-lg font-bold text-gray-800">Rp 250.000</span>
-                        </div>
-                        <button class="btn-remove" aria-label="Hapus dari keranjang">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="item-card relative p-4 bg-white rounded-lg shadow-md">
-                        <img src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Produk 5" class="w-full h-40 object-cover rounded-md" />
-                        <div class="mt-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Produk 5</h2>
-                            <p class="text-base text-gray-600">Deskripsi singkat produk 5.</p>
-                            <span class="block mt-2 text-lg font-bold text-gray-800">Rp 250.000</span>
-                        </div>
-                        <button class="btn-remove" aria-label="Hapus dari keranjang">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="item-card relative p-4 bg-white rounded-lg shadow-md">
-                        <img src="https://res-3.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660633363_5fb384c441ab59059e8698a9" alt="Produk 5" class="w-full h-40 object-cover rounded-md" />
-                        <div class="mt-4">
-                            <h2 class="text-xl font-semibold text-gray-800">Produk 5</h2>
-                            <p class="text-base text-gray-600">Deskripsi singkat produk 5.</p>
-                            <span class="block mt-2 text-lg font-bold text-gray-800">Rp 250.000</span>
-                        </div>
-                        <button class="btn-remove" aria-label="Hapus dari keranjang">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
             </div>
-        </section>
-    </main>
 
-    <div id="toast">Item ditambahkan ke keranjang!</div>
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
+            </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
+          </div>
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
+            </div>
+
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
+            </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
+          </div>
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
+            </div>
+
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
+            </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
+          </div>
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
+            </div>
+
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
+            </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
+          </div>
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
+            </div>
+
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
+            </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
+          </div>
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
+            </div>
+
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+        <div class="w-full flex items-center justify-between pr-6 pl-8 py-6  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 hover:bg-gray-50 hover:border-t-2 border-t-2 overflow-x-auto">
+          <div class=" w-auto flex justify-center items-center gap-x-4">
+            <input type="checkbox" class="scale-150">
+            <a href="informasi-belanja.html">
+              <img src="Gambar/obat-c-2.jpeg" class="w-[100px] h-[50px] object-cover" alt="Gambar produk">
+            </a>
+
+            <div class=" flex flex-col justify-start items-start w-[150px]">
+
+            <h2 class="text-[13px] font-medium text-gray-800">Obat Vitamin C Ampuh Banget</h2>
+            <p class="text-[10px] font-medium text-gray-600">Obat Vitamin C Ampuh Banget</p>
+            </div>
+
+            <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
+              <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
+              <select class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block  p-1 w-">
+                <option value="tablet">10 Tablet</option>
+                <option value="tablet">20 Tablet</option>
+                <option value="tablet">30Tablet</option>
+                <option value="tablet">40 Tablet</option>
+                
+              </select>
+            </div>
+
+          </div>
+  
+          <div class="flex justify-between items-center w-auto gap-x-16 ">
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+            
+            
+            <div class="flex items-center justify-center w-[23%]">
+              <button class=" py-[3px] px-[12px] border-2 text-xl font-bold text-gray-500">-</button>
+              <input  type="text" class=" border-2 text-lg font-bold text-gray-500  w-[50px] py-[3px] px-[15px] value">
+              <button class=" py-[3px] px-[12px] border-2 text-lg font-bold text-gray-500">+</button>
+            </div>
+
+          <p class="text-sm font-medium text-gray-500 w-[23%]">Rp.100.000</p>
+
+            
+
+            <button class="bg-[red] border-none rounded-md shadow-sm py-2 px-6 font-semibold text-white w-[23%] duration-300 hover:bg-red-700">Hapus</button>
+          </div>
+        </div>
+
+        <hr class="w-full border-t-2 border-gray-200 "> 
+
+
+
+        
+
+
+        
+
+
+
+      </div>
+      
+    </div>
+
+    <div class="w-full h-auto pb-12 flex justify-center items-center ">
+      <div class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-[60px] px-8 flex justify-between items-center p-10 rounded-lg shadow-sm bg-white transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 ">
+        
+        <div class="flex justify-start items-center w-auto gap-x-4">
+          <p class="font-bold text-lg text-gray-600">Total Belanja :</p>
+          <p class="font-bold text-lg text-gray-800">Rp.300.000 </p>
+        </div>
+    
+        <div class="flex justify-between items-center w-auto  gap-16">
+          <button class="consultButton hijau border-none rounded-md shadow-sm py-3 px-6 font-semibold text-white duration-300 hover:bg-emerald-600">Checkout</button>
+          
+        </div>
+        
+      </div>
+    </div>
+
+    
+
+
+
+    
+
 
 
     <section class="py-10 sm:pt-16 lg:pt-24 bg-white">
@@ -483,6 +830,23 @@
       
 
     <script>
+
+const consultButtons = document.querySelectorAll('.consultButton');
+  const checkoutForms = document.querySelectorAll('.checkoutForm');
+  const closeForms = document.querySelectorAll('.closeForm');
+
+  consultButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      checkoutForms.forEach(form => form.classList.remove('hidden'));
+    });
+  });
+
+  closeForms.forEach(button => {
+    button.addEventListener('click', function () {
+      checkoutForms.forEach(form => form.classList.add('hidden'));
+    });
+  });
+
         // Show and hide toast notification
         function showToast(message) {
             const toast = document.getElementById('toast');
@@ -514,6 +878,10 @@
                 }, 300);
             });
         });
+
+
+        
+
     </script>
 </body>
 
