@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Artikel - SehatGo</title>
+
+  <link rel="icon" type="image/png" href="/Gambar/logo-sehatgo.png">
+
+  <style>
+    .text-judul {
+      color: rgb(121, 121, 121);
+    }
+
+    .hijau {
+      background-color: #2DD8A3;
+    }
+
+    .background {
+      background: rgb(50, 213, 134);
+      background: linear-gradient(90deg, rgba(50, 213, 134, 1) 47%, rgba(65, 255, 196, 1) 100%);
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="pb-0  bg-white lg:pb-0 fixed w-full shadow-md z-10">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex">
+            <img class="w-auto h-8 lg:h-10" src="Gambar/Logo.png" alt="Logo Sehat Go" />
+          </a>
+        </div>
+
+        <button type="button" id="button-muncul"
+          class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+          <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+          <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="hidden lg:flex lg:items-center lg:ml-auto lg:space-x-8">
+          <a href="index.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Beranda
+          </a>
+          <a href="tentang.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tentang
+          </a>
+          <a href="artikel.html"
+            class="relative text-base font-semibold text-[#66BBF8] transition duration-300 after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300"
+            aria-current="page">
+            Artikel
+          </a>
+
+          <a href="penyakit.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Penyakit
+          </a>
+
+          <a href="tanya-dokter.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Tanya Dokter
+          </a>
+          <a href="toko.html"
+            class="relative text-base font-semibold text-gray-500 transition duration-300 hover:text-[#66BBF8] focus:text-[#66BBF8] 
+            after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#66BBF8] after:transition-all after:duration-300 hover:after:w-full">
+            Toko
+          </a>
+        </div>
+
+        <a href="login.html"
+          class="hidden px-4 py-3 ml-10 text-base font-semibold text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md lg:inline-flex hover:bg-[#5AADE3] focus:bg-[#5AADE3]">
+          Daftar / Login
+        </a>
+      </nav>
+
+
+      <nav class="pt-4 pb-6 mb-4 bg-white border border-gray-200 rounded-md shadow-md lg:hidden hidden" id="muncul">
+        <div class="flow-root">
+          <div class="flex flex-col px-6 -my-2 space-y-1">
+            <a href="index.html"
+              class="w-full  inline-flex py-2 text-base font-medium font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 text-gray-600 font-semibold">Beranda</a>
+            <a href="tentang.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tentang</a>
+            <a href="artikel.html"
+              class="inline-flex py-2 text-base font-medium text-[#66BBF8] font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Artikel</a>
+            <a href="penyakit.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Penyakit</a>
+            <a href="tanya-dokter.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Tanya
+              Dokter</a>
+            <a href="toko.html"
+              class="inline-flex py-2 text-base font-medium text-gray-600 font-roboto transition-all duration-200 hover:text-[#66BBF8] focus:text-blue-600 font-semibold">Toko</a>
+          </div>
+        </div>
+        <div class="px-6 mt-6">
+          <a href="login.html"
+            class="inline-flex justify-center px-4 py-3 text-base font-semibold font-roboto text-white transition-all duration-200 bg-[#66BBF8] border border-transparent rounded-md  hover:bg-[#5AADE3]">Daftar
+            / Login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class=" w-full h-auto h-auto background flex  items-center justify-center lg:pb-4 lg:pt-28 pt-32 pb-12 ">
+    <div
+      class="2xl:w-[65%] xl:w-[80%] lg:w-[90%] w-full  h-auto flex flex-col lg:flex-row items-center justify-center  gap-y-12">
+      <div
+        class="lg:w-[50%] md:w-[80%] w-full  flex lg:items-start md:items-center lg:text-start text-center  items-center justify-center flex-col gap-4 ">
+        <div class="flex items-start justify-center gap-3">
+          <a class="text-white font-medium" href="beranda">Beranda</a>
+          <p class="text-white font-medium">/</p>
+          <a class="text-white font-medium" href="beranda">Artikel</a>
+        </div>
+        <h1 class="font-bold text-white text-4xl poppins">Baca Artikel Kesehatan</h1>
+        <p class="font-reguler text-white text-base leading-8 w-[80%]">Dapatkan pengetahuan tentang tentang gaya hidup
+          sehat dan kesehatan </p>
+      </div>
+      <div class="lg:w-[50%] md:w-[80%] w-full flex justify-center items-center">
+        <img class="object-cover auto h-[300px] w-[400px]" src="Gambar/depan.jpg" alt="Gambar Ilustrasi">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w-full h-auto flex items-center justify-top bg-[#F9F9F9] py-6 flex-col gap-10">
+
+    <div
+      class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-full px-6 lg:px-0 h-auto flex items-center lg:items-start lg:justify-start justify-center text-center flex-col gap-4">
+      <h1 class="font-bold text-gray-800 text-3xl font-poppins">Artikel Kesehatan</h1>
+      <h1 class="font-roboto text-base">Dapatkan pengetahuan tentang tentang gaya hidup sehat dan kesehatan </h1>
+    </div>
+
+    <div
+      class="2xl:w-[65%] xl:w-[80%] lg:w-[90%] w-[100%] flex flex-wrap lg:flex-wrap items-center lg:justify-between justify-center gap-6  lg:px-0  ">
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-[#2DD8A3] text-white font-semibold rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Terbaru</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-white text-gray-700 font-semibold rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:bg-gray-100 hover:scale-105 duration-300 font-roboto">Kulit</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-white text-gray-700 font-semibold rounded-md transition ease-in-out delay-150 hover:bg-gray-100  hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Buah</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-white text-gray-700 font-semibold rounded-md transition ease-in-out delay-150 hover:bg-gray-100 hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Minuman</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-white text-gray-700 font-semibold rounded-md transition ease-in-out delay-150 hover:bg-gray-100  hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Olahraga</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-white text-gray-700 font-semibold rounded-md transition ease-in-out delay-150 hover:bg-gray-100  hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Aktivitas</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 bg-white text-gray-700 font-semibold rounded-md transition ease-in-out delay-150 hover:bg-gray-100  hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Organ
+        Tubuh</button>
+      <button
+        class="2xl:w-[10%] lg:w-[20%] w-[20%] py-3 text-gray-600 font-semibold rounded-md transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300 font-roboto">Lainnya..</button>
+    </div>
+
+
+
+  </div>
+
+  <div class="w-full bg-[#f7f9ff] h-auto flex justify-center items-center flex-col">
+    <div
+      class="2xl:w-[65%] xl:w-[80%] lg:w-[90%] w-[100%] h-auto my-12 flex justify-center lg:items-start items-center flex-col lg:flex-row">
+      <div class="lg:w-[70%] w-[90%] flex items-center justify-start flex-col gap-12">
+        <img class="w-full h-[450px] rounded-md object-cover" src="Gambar/anemia-1.jpg" alt="">
+
+        <div class="flex justify-center items-left flex-col gap-3 pb-12 ">
+          <h3 class="font-semibold text-xl poppins text-gray-700">Pengertian Anemia</h3>
+          <p class="text-justify leading-8">Anemia adalah kondisi di mana tubuh kekurangan sel darah merah yang sehat
+            atau hemoglobin yang cukup untuk mengangkut oksigen ke jaringan tubuh. Akibatnya, penderita anemia sering
+            merasa lelah, lemah, dan mengalami gejala lainnya.<a class="text-blue-500 " href="Penyakit/anemia.html">
+              Selengkapnya...</a></p>
+        </div>
+
+        <a href="artikel/manfaat-jeruk.html"
+          class=" w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105  duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/jeruk-1.jpg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold poppins text-gray-700">Manfaat Kandungan Nutrisi Jeruk</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Meningkatkan sistem kekebalan tubuh
+              dengan kandungan vitamin C yang tinggi</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Buah</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Kesehatan</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="artikel/manfaat-apel.html"
+          class=" w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105   duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/apel-1.jpg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-700">Manfaat Kandungan Nutrisi Apel</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Menjaga kesehatan jantung dengan
+              serat, kalium, dan antioksidan, Meningkatkan kesehatan pencernaan</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Buah</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Kesehatan</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="artikel/kulit-gatal.html"
+          class=" w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-105  hover:bg-indigo-500 duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/kulit-gatal-2.jpeg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-700">Penyebab dan Gejala Kulit Gatal</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Kulit gatal atau pruritus adalah
+              sensasi tidak nyaman pada kulit yang menyebabkan dorongan untuk menggaruk.</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Kulit</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Penyakit</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="artikel/dampak-kurang-minum-air-putih.html"
+          class=" w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-105  hover:bg-indigo-500 duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/air-putih-1.jpg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-700">Dampak Kurang Minum Air Putih</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Dehidrasi yang menyebabkan rasa haus
+              berlebihan, pusing, dan kelelahan serta Gangguan pencernaan seperti sembelit</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Penyakit</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Minuman</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+
+      </div>
+
+
+
+
+
+
+
+      <div class="2xl:w-[30%]  lg:w-[30%]  w-full pt-16 lg:pt-0">
+        <div class="w-auto px-10 flex justify-center lg:items-start items-center  flex-col">
+          <div class=" w-full lg:w-full lg:flex-col flex justify-center items-center flex lg:gap-12 gap-6">
+
+            <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
+            </div>
+
+            <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="w-full bg-[#f7f9ff] h-auto flex justify-center items-center flex-col bg-green">
+    <div
+      class="2xl:w-[65%] xl:w-[80%] lg:w-[90%] w-[100%] h-auto my-12 flex justify-center lg:items-start items-center flex-col lg:flex-row">
+      <div class="lg:w-[70%] w-[85%] flex items-center justify-start flex-col gap-12">
+        <img class="w-full h-[450px] rounded-md object-cover" src="Gambar/jogging-1.jpg" alt="Jogging">
+
+        <div class="flex justify-center items-left flex-col gap-3 pb-12 ">
+          <h3 class="font-semibold text-xl  poppins text-gray-700">Manfaat Jogging</h3>
+          <p class="text-justify leading-8">Jogging adalah aktivitas lari santai dengan kecepatan lambat, yang sering
+            dijadikan pilihan olahraga karena mudah dilakukan dan memiliki banyak manfaat untuk kesehatan fisik maupun
+            mental. Jogging bisa dilakukan di luar ruangan atau di atas treadmill <a class="text-blue-500 "
+              href="artikel/manfaat-jogging.html">
+              Selengkapnya...</a></p>
+        </div>
+
+
+
+        <a href="artikel/manfaat-yoga.html"
+          class="w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-105  hover:bg-indigo-500 duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/yoga-1.jpg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-800">Manfaat Yoga</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Yoga bertujuan untuk meningkatkan
+              fleksibilitas, kekuatan, keseimbangan, serta kesehatan mental dan fisik.</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Olahraga</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Kesehatan</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="artikel/dampak-berlebihan-konsumsi-gula.html"
+          class="w-full  flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-105  hover:bg-indigo-500 duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/gula-1.jpeg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-800">Dampak Berlebihan Konsumsi Gula</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Mengonsumsi gula dalam jumlah
+              berlebihan dapat menyebabkan berbagai masalah kesehatan</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Penyakit</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Makanan</p>
+            </div>
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="artikel/dampak-bergadang.html"
+          class="w-full  flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-105  hover:bg-indigo-500 duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/bergadang.webp">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-800">Dampak bergadang</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Kurangnya waktu tidur yang cukup
+              dapat berdampak buruk pada kesehatan, terutama jika dilakukan secara berulang.</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Aktivitas</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Penyakit</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="Penyakit/asthma.html"
+          class=" w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105  duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/sesak-nafas-1.jpg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold poppins text-gray-700">Gejala dan Penyebab Asma</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Penyakit ini dapat menyebabkan
+              kesulitan bernapas dengan gejala yang bervariasi dalam tingkat keparahan</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Penyakit</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Organ Tubuh</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+        <a href="Penyakit/batuk.html"
+          class=" w-full flex justify-center items-center px-2 bg-white  hover:bg-white hover:rounded-md duration-300 hover:ring-gray-100 hover:ring py-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105   duration-300">
+          <img class="w-[40%] h-[220px]  bg-gray-800 rounded-md object-cover" src="Gambar/batuk-1.jpg">
+          <div class="w-[60%] lg:h-[220px] h-auto flex items-start justify-center flex-col md:gap-4 gap-2 pl-6">
+            <h1 class="font-semibold  poppins text-gray-700">Gejala dan Penyebab Batuk</h1>
+
+            <p class="text-gray-700 md:text-sm text-[12px] md:leading-8 leading-6">Batuk adalah respons alami tubuh yang
+              berfungsi untuk membersihkan saluran pernapasan dari iritasi, lendir</p>
+
+            <div class="flex justify-center items-start gap-4">
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Penyakit</p>
+              <p class="px-5 py-2 hijau text-white font-semibold text-[12px] rounded-md">Organ Tubuh</p>
+            </div>
+
+            <p class="text-[#2DD8A3] font-semibold ">Selengkapnya ...</p>
+          </div>
+        </a>
+
+
+      </div>
+
+
+
+
+      <div class="2xl:w-[30%]  lg:w-[30%]  w-full lg:pt-0 pt-16">
+        <div class="w-auto px-10 flex justify-center lg:items-start items-center  flex-col">
+          <div class=" w-full lg:w-full lg:flex-col flex justify-center items-center flex lg:gap-12 gap-6">
+
+            <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
+            </div>
+
+            <div class="w-full lg:h-[600px] h-[300px] p-4 border-2 ">
+              <p
+                class="text-2xl font-semibold text-gray-500 lg:w-full bg-gray-100 w-full lg:h-full h-full object-cover rounded-md border-2 p-4 flex justify-center items-center text-center">
+                Iklan</p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="w-full flex items-center justify-center pb-12">
+      <button
+        class="min-w-9 rounded-md bg-slate-800 py-2 px-3 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+        1
+      </button>
+      <button
+        class="min-w-9 bg-white rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+        2
+      </button>
+      <button
+        class="min-w-9 bg-white rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+        3
+      </button>
+
+      <button
+        class="min-w-9 bg-white rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+        4
+      </button>
+
+      <button
+        class="min-w-9 bg-white rounded-md border border-slate-300 py-2 px-3 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+        5
+      </button>
+    </div>
+
+  </div>
+
+  <section class="py-10 sm:pt-16 lg:pt-24 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
+        <div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
+          <a href="index.html">
+            <img class="w-auto h-[50px]" src="Gambar/Logo.png" alt="Logo SehatGo" />
+          </a>
+
+          <p class="text-justify leading-relaxed text-gray-600 mt-5 font-roboto">
+            SehatGo adalah platform kesehatan yang menawarkan solusi fleksibel dan personal untuk memenuhi kebutuhan
+            unik setiap individu.
+          </p>
+
+          <ul class="flex items-center space-x-3 mt-8">
+            <li>
+              <a href="#" title=""
+                class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" title=""
+                class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" title=""
+                class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z">
+                  </path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z">
+                  </path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold tracking-widest text-gray-700 uppercase font-roboto">
+            SehatGo
+          </p>
+
+          <ul class="mt-6 space-y-4">
+            <li>
+              <a href="index.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Beranda
+              </a>
+            </li>
+
+            <li>
+              <a href="tentang.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Tentang
+              </a>
+            </li>
+
+            <li>
+              <a href="artikel.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Artikel
+              </a>
+            </li>
+
+            <li>
+              <a href="login.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Daftar / Login
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold text-gray-700 tracking-widest text-gray-400 uppercase font-roboto">
+            Lainnya
+          </p>
+
+          <ul class="mt-6 space-y-4">
+            <li>
+              <a href="toko.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Toko
+              </a>
+            </li>
+
+            <li>
+              <a href="informasi-dokter.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Buat Janji
+              </a>
+            </li>
+
+            <li>
+              <a href="tanya-dokter.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Tanya Dokter
+              </a>
+            </li>
+
+            <li>
+              <a href="penyakit.html" title=""
+                class="flex text-base text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-roboto">
+                Penyakit
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+          <p class="text-sm font-semibold tracking-widest text-gray-700 uppercase font-roboto">
+            Ikuti Kami Untuk Berita Baru
+          </p>
+
+          <form action="#" method="POST" class="mt-6">
+            <div>
+              <label for="email" class="sr-only font-roboto">Email</label>
+              <input type="email" name="email" id="email" placeholder="Masukan Email"
+                class="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
+            </div>
+
+            <button type="submit"
+              class="inline-flex items-center font-roboto justify-center px-16 py-4 mt-6 font-semibold text-white transition-all duration-200 hijau rounded-md hover:bg-white focus:bg-white hover:text-black hover:ring hover:ring-emerald-400">
+              Ikuti
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="mt-16 mb-10 border-gray-200" />
+
+      <p class="text-sm text-center text-gray-600 font-roboto">
+        © Copyright 2021, All Rights Reserved by SehatGo
+      </p>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="transitions.js"></script>
+
+</body>
+
+</html>
+
+<script>
+  const button = document.getElementById('button-muncul');
+  const menu = document.getElementById('muncul');
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    barba.init({
+      transitions: [{
+        name: 'fade',
+        leave(data) {
+          return gsap.to(data.current.container, {
+            opacity: 0,
+            duration: 0.5
+          });
+        },
+        enter(data) {
+          return gsap.from(data.next.container, {
+            opacity: 0,
+            duration: 0.5
+          });
+        }
+      }]
+    });
+  });
+
+</script>
+
+</body>
+
+</html>
