@@ -180,7 +180,7 @@
 
     <div
       class="lg:w-[90%] xl:w-[80%] 2xl:w-[65%] w-[90%] h-auto flex justify-start items-start flex-col pt-12 text-gray-700 gap-4">
-      <h1 class="font-bold poppins text-3xl">Cari Dokter Konsultasi</h1>
+      <h1 class="font-bold poppins lg:text-3xl text-2xl">Cari Dokter Konsultasi</h1>
       <p class="font-medium">Memilih dokter sesuai kebutuhan yang diinginkan </p>
     </div>
 
@@ -315,22 +315,22 @@
       <div class="lg:w-[70%] w-[90%] h-auto flex items-start justify-start flex-col  py-4 gap-4">
         <h1 class="font-bold poppins text-gray-700 text-2xl ">Cari Dokter</h1>
 
-        <div class="w-full flex justify-start items-center flex-col gap-12">
-          <div class="w-full h-[250px] bg-white rounded-md border-2 border-gray-300 flex justify-center items-center ">
-            <div class="w-[65%] h-full flex justify-center items-start lg:pl-8 pl-4 py-2  flex-col">
+        <div class="w-full flex justify-between items-center flex-col gap-12">
+          <div class="w-full h-[250px] bg-white rounded-md border-2 border-gray-300 flex justify-ne items-center ">
+            <div class="w-[65%] h-full flex justify-between py-6 items-start lg:pl-8 pl-4 py-2  flex-col">
               <div class="w-full h-[70%] flex items-start justify-start gap-4">
                 <img class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px] rounded-full object-cover"
                   src="Gambar/foto-dokter-1.jpg" alt="Foto Dokter">
 
                 <div class="w-auto full flex justify-center items-start flex-col gap-2">
-                  <h1 class="font-medium text-gray-600 lg:text-lg text-sm poppins">Dr Wira Natha Putra S.Pd</h1>
+                  <h1 class="font-medium text-gray-600 lg:text-lg text-sm poppins">Dr Lestari Alexia S.Pd</h1>
                   <div class="flex gap-2">
                     <i class='bx bx-id-card'></i>
                     <P class=" text-gray-400 lg:text-sm text-xs font-medium">Dokter Gigi</P>
                   </div>
                   <div class="flex gap-2">
                     <i class='bx bxs-building-house' style='color:#6a6a6a'></i>
-                    <P class=" text-gray-400 lg:text-sm text-xs font-medium">BBMC Krisna Ganteng Banget Anjir</P>
+                    <P class=" text-gray-400 lg:text-sm text-xs font-medium">Rumah Sakit Premagana</P>
                   </div>
                 </div>
 
@@ -342,7 +342,7 @@
                 <p class="lg:text-sm text-xs text-gray-600 tracking-wider">Jadwal Tersedia : 09.00 - 12.00</p>
               </div>
             </div>
-            <div class="w-[35%] h-full flex justify-center items-end py-2 flex-col">
+            <div class="w-[35%] h-full flex justify-between items-end py-6 flex-col">
               <div
                 class="w-[80%] h-auto bg-[#f7f9ff] rounded-l-lg p-3 flex justify-start items-start flex-col gap-1 tracking-wider">
                 <p class="lg:text-sm text-xs font-semibold text-gray-500">Ulasan Dokter</p>
@@ -376,11 +376,10 @@
             class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
             <div class="w-full max-w-4xl p-8 rounded-lg shadow-xl relative bg-[#f7f9ff]">
               <h2 class="text-3xl font-bold text-gray-800 mb-2">Form Konsultasi</h2>
-              <p class="mb-6">Isikan data anda untuk konsultasi</p>
-              <form action="#" method="POST" class="grid grid-cols-2 gap-4">
+              <form action="#" method="POST" class="grid md:gap-4 gap-2">
 
                 <!-- Nama Depan -->
-                <div>
+                <div class="md:col-span-1 col-span-2">
                   <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
                   <input type="text" id="firstName" name="firstName"
                     class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
@@ -388,7 +387,7 @@
                 </div>
 
                 <!-- Pilih Paket -->
-                <div>
+                <div class="md:col-span-1 col-span-2">
                   <label for="package" class="block text-sm font-medium text-gray-700">Pilih Paket</label>
                   <select id="package" name="package"
                     class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 bg-white focus:outline-none focus:ring-2 focus:border-transparent"
@@ -400,7 +399,7 @@
                 </div>
 
                 <!-- Tanggal Lahir -->
-                <div>
+                <div class="md:col-span-1 col-span-2">
                   <label for="dob" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
                   <input type="date" id="dob" name="dob"
                     class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
@@ -408,7 +407,7 @@
                 </div>
 
                 <!-- Waktu Konsultasi -->
-                <div>
+                <div class="md:col-span-1 col-span-2">
                   <label for="consultationDate" class="block text-sm font-medium text-gray-700">Waktu Konsultasi</label>
                   <input type="date" id="consultationDate" name="consultationDate"
                     class="t-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
@@ -416,7 +415,7 @@
                 </div>
 
                 <!-- Email -->
-                <div>
+                <div class="md:col-span-1 col-span-2">
                   <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                   <input type="email" id="email" name="email"
                     class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
@@ -424,7 +423,7 @@
                 </div>
 
                 <!-- No Telepon -->
-                <div>
+                <div class="md:col-span-1 col-span-2">
                   <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
                   <input type="tel" id="phone" name="phone"
                     class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent"
@@ -440,44 +439,37 @@
                     required placeholder="Masukan Deskripsi Permasalahan"></textarea>
                 </div>
 
-                <!-- Pesan Tambahan (Full Width) -->
-                <div class="col-span-2">
-                  <label for="message" class="block text-sm font-medium text-gray-700">Pesan Tambahan</label>
-                  <textarea id="message" name="message" rows="3"
-                    class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:border-transparent resize-none"
-                    placeholder="Masukan Pesan Tambahan"></textarea>
-                </div>
-
                 <!-- Button Actions (Full Width) -->
                 <div class="col-span-2 flex justify-between items-center">
-                  <button type="submit"
-                    class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
-                    Konsultasi
-                  </button>
                   <button type="button"
                     class="closeForm w-[48%] bg-gray-800 hover:bg-black duration-300 text-white font-bold py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
                     Batal
                   </button>
+                  <button type="submit"
+                    class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-3 px-6 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2">
+                    Konsultasi
+                  </button>
+                  
                 </div>
               </form>
             </div>
           </div>
 
           <div class="w-full h-[250px] bg-white rounded-md border-2 border-gray-300 flex justify-center items-center ">
-            <div class="w-[65%] h-full flex justify-center items-start lg:pl-8 pl-4 py-2  flex-col">
+            <div class="w-[65%] h-full flex justify-between items-start lg:pl-8 pl-4 py-6  flex-col">
               <div class="w-full h-[70%] flex items-start justify-start gap-4">
                 <img class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px] rounded-full object-cover"
                   src="Gambar/foto-dokter-2.jpg" alt="Foto Dokter">
 
                 <div class="w-auto full flex justify-center items-start flex-col gap-2">
-                  <h1 class="font-medium text-gray-600 lg:text-lg text-sm poppins">Dr Wira Natha Putra S.Pd</h1>
+                  <h1 class="font-medium text-gray-600 lg:text-lg text-sm poppins">Dr Putu Yanti S.Pd</h1>
                   <div class="flex gap-2">
                     <i class='bx bx-id-card'></i>
                     <P class=" text-gray-400 lg:text-sm text-xs font-medium">Dokter Gigi</P>
                   </div>
                   <div class="flex gap-2">
                     <i class='bx bxs-building-house' style='color:#6a6a6a'></i>
-                    <P class=" text-gray-400 lg:text-sm text-xs font-medium">BBMC Krisna Ganteng Banget Anjir</P>
+                    <P class=" text-gray-400 lg:text-sm text-xs font-medium">Rumah Sakit Sanglah</P>
                   </div>
                 </div>
 
@@ -489,7 +481,7 @@
                 <p class="lg:text-sm text-xs text-gray-600 tracking-wider">Jadwal Tersedia : 09.00 - 12.00</p>
               </div>
             </div>
-            <div class="w-[35%] h-full flex justify-center items-end py-2 flex-col">
+            <div class="w-[35%] h-full flex justify-between items-end py-6 flex-col">
               <div
                 class="w-[80%] h-auto bg-[#f7f9ff] rounded-l-lg p-3 flex justify-start items-start flex-col gap-1 tracking-wider">
                 <p class="lg:text-sm text-xs font-semibold text-gray-500">Ulasan Dokter</p>
@@ -512,20 +504,20 @@
           </div>
 
           <div class="w-full h-[250px] bg-white rounded-md border-2 border-gray-300 flex justify-center items-center ">
-            <div class="w-[65%] h-full flex justify-center items-start lg:pl-8 pl-4 py-2  flex-col">
+            <div class="w-[65%] h-full flex justify-center items-start lg:pl-8 pl-4 py-6  flex-col">
               <div class="w-full h-[70%] flex items-start justify-start gap-4">
                 <img class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px] rounded-full object-cover"
                   src="Gambar/foto-dokter-3.jpg" alt="Foto Dokter">
 
                 <div class="w-auto full flex justify-center items-start flex-col gap-2">
-                  <h1 class="font-medium text-gray-600 lg:text-lg text-sm poppins">Dr Wira Natha Putra S.Pd</h1>
+                  <h1 class="font-medium text-gray-600 lg:text-lg text-sm poppins">Dr Yostab Putra S.Pd</h1>
                   <div class="flex gap-2">
                     <i class='bx bx-id-card'></i>
                     <P class=" text-gray-400 lg:text-sm text-xs font-medium">Dokter Gigi</P>
                   </div>
                   <div class="flex gap-2">
                     <i class='bx bxs-building-house' style='color:#6a6a6a'></i>
-                    <P class=" text-gray-400 lg:text-sm text-xs font-medium">BBMC Krisna Ganteng Banget Anjir</P>
+                    <P class=" text-gray-400 lg:text-sm text-xs font-medium">Rumah Sakit Premagana</P>
                   </div>
                 </div>
 
@@ -537,7 +529,7 @@
                 <p class="lg:text-sm text-xs text-gray-600 tracking-wider">Jadwal Tersedia : 09.00 - 12.00</p>
               </div>
             </div>
-            <div class="w-[35%] h-full flex justify-center items-end py-2 flex-col">
+            <div class="w-[35%] h-full flex justify-between items-end py-6 flex-col">
               <div
                 class="w-[80%] h-auto bg-[#f7f9ff] rounded-l-lg p-3 flex justify-start items-start flex-col gap-1 tracking-wider">
                 <p class="lg:text-sm text-xs font-semibold text-gray-500">Ulasan Dokter</p>
@@ -561,7 +553,7 @@
           </div>
 
           <div class="w-full h-[250px] bg-white rounded-md border-2 border-gray-300 flex justify-center items-center ">
-            <div class="w-[65%] h-full flex justify-center items-start lg:pl-8 pl-4 py-2  flex-col">
+            <div class="w-[65%] h-full flex justify-between items-start lg:pl-8 pl-4 py-6  flex-col">
               <div class="w-full h-[70%] flex items-start justify-start gap-4">
                 <img class="lg:w-[100px] lg:h-[100px] w-[70px] h-[70px] rounded-full object-cover"
                   src="Gambar/foto-dokter-3.webp" alt="Foto Dokter">
@@ -586,7 +578,7 @@
                 <p class="lg:text-sm text-xs text-gray-600 tracking-wider">Jadwal Tersedia : 09.00 - 12.00</p>
               </div>
             </div>
-            <div class="w-[35%] h-full flex justify-center items-end py-2 flex-col">
+            <div class="w-[35%] h-full flex justify-between items-end py-6 flex-col">
               <div
                 class="w-[80%] h-auto bg-[#f7f9ff] rounded-l-lg p-3 flex justify-start items-start flex-col gap-1 tracking-wider">
                 <p class="lg:text-sm text-xs font-semibold text-gray-500">Ulasan Dokter</p>
