@@ -112,23 +112,21 @@
 <body class="bg-[#f7f9ff]">
 
 
-  <div
-    class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg ">
-    <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative  fade-in bg-[#f7f9ff]">
+  <div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
+    <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative  fade-in bg-[#f7f9ff]" id="checkoutForm">
       <h2 class="text-2xl font-bold text-gray-800 poppins mb-3">Form Pembelian</h2>
-      <p class="mb-4 text-sm">Isikan data anda untuk pembayaran belanja</p>
-      <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form action="#" method="POST" class="gap-4 grid">
 
         <!-- Nama Depan -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
           <input type="text" id="firstName" name="firstName"
-            class="bg-white mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            class=" mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
             required placeholder="Masukan Nama">
         </div>
 
         <!-- Metode Pembayaran -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
           <select id="package" name="package"
             class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -140,7 +138,7 @@
         </div>
 
         <!-- Email -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
           <input type="email" id="email" name="email"
             class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -148,7 +146,7 @@
         </div>
 
         <!-- No Telepon -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
           <input type="tel" id="phone" name="phone"
             class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -156,34 +154,36 @@
         </div>
 
         <!-- Alamat -->
-        <div class="col-span-2">
+        <div class="md:col-span-2 col-span-1">
           <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
           <textarea id="address" name="address" rows="3"
-            class=" resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
+            class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
             placeholder="Masukan Alamat" required></textarea>
         </div>
 
         <!-- Pesan ke penjual -->
-        <div class="col-span-2">
+        <div class="md:col-span-2 col-span-1">
           <label for="sellerMessage" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
           <textarea id="sellerMessage" name="sellerMessage" rows="3"
             class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
             placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
         </div>
 
-        <h1 class="col-span-2 text-lg font-semibold mt-3">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
+        <h1 class="col-span-2 text-lg font-semibold mt-1">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
         </h1>
 
         <!-- Button Actions -->
-        <div class="col-span-2 flex justify-between items-center mt-3">
+        <div class="col-span-2 flex justify-between items-center ">
+          <button type="button"
+            class="closeForm w-[48%] bg-gray-800 hover:bg-black hover:bg-red-700 duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+            Batal
+          </button>
+
           <button type="submit"
             class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
             Pesan
           </button>
-          <button type="button"
-            class="closeForm w-[48%] bg-gray-800 hover:bg-black duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
-            Batal
-          </button>
+          
         </div>
       </form>
     </div>
@@ -293,14 +293,14 @@
     <!-- Kontainer Produk Utama -->
     <div
       class="bg-white rounded-lg p-6 mb-6 fade-in   transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-105 duration-300">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+      <div class="flex flex-col md:flex-row items-center md:items-center justify-between">
         <!-- Gambar Produk Utama -->
         <div class="w-full md:w-2/4 mb-6 md:mb-0 p-2">
           <img class="w-full md:h-[400px] h-[350px] rounded-lg object  lazyload" data-src="Gambar/susu.jpg"
             alt="Degirol 0,25 mg">
         </div>
         <!-- Detail Produk Utama -->
-        <div class="w-full md:w-[80%] xl:w-[80%] pr-6">
+        <div class="w-full md:w-[80%] bg xl:w-[80%] ">
           <h1 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 poppins mb-4">Susu Nutrilon Royal</h1>
           <p class="text-[12px] md:text-[15px] leading-6 text-justify text-gray-600 leading-relaxed mb-4">
             susu formula untuk bayi dan balita yang dikenal di Indonesia. Produk ini mengandung nutrisi penting seperti
@@ -314,7 +314,7 @@
           </div>
           <!-- Opsi -->
           <div class="mb-4">
-            <label class="block text-gray-700 text-sm mb-2" for="size">
+            <label class="block text-gray-700 bg-white text-sm mb-2" for="size">
               Pilih Ukuran:
             </label>
             <select id="size"

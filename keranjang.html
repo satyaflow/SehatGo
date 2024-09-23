@@ -148,6 +148,11 @@
       display: none;
       z-index: 1000;
     }
+
+    .custom-scrollbar::-webkit-scrollbar {
+  width: 0px;  
+  height: 0px; 
+}
   </style>
 </head>
 
@@ -157,11 +162,10 @@
   <div class="checkoutForm hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 shadow-lg">
     <div class="w-full max-w-3xl p-6 rounded-lg shadow-xl relative  fade-in bg-[#f7f9ff]" id="checkoutForm">
       <h2 class="text-2xl font-bold text-gray-800 poppins mb-3">Form Pembelian</h2>
-      <p class="mb-4 text-sm">Isikan data anda untuk konsultasi</p>
-      <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form action="#" method="POST" class="gap-4 grid">
 
         <!-- Nama Depan -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="firstName" class="block text-sm font-medium text-gray-700">Nama Depan</label>
           <input type="text" id="firstName" name="firstName"
             class=" mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -169,7 +173,7 @@
         </div>
 
         <!-- Metode Pembayaran -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="package" class="block text-sm font-medium text-gray-700">Metode Pembayaran</label>
           <select id="package" name="package"
             class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 bg-white focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -181,7 +185,7 @@
         </div>
 
         <!-- Email -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
           <input type="email" id="email" name="email"
             class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -189,7 +193,7 @@
         </div>
 
         <!-- No Telepon -->
-        <div>
+        <div class="md:col-span-1 col-span-2">
           <label for="phone" class="block text-sm font-medium text-gray-700">No Telepon</label>
           <input type="tel" id="phone" name="phone"
             class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -197,7 +201,7 @@
         </div>
 
         <!-- Alamat -->
-        <div class="col-span-2">
+        <div class="md:col-span-2 col-span-1">
           <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
           <textarea id="address" name="address" rows="3"
             class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
@@ -205,26 +209,28 @@
         </div>
 
         <!-- Pesan ke penjual -->
-        <div class="col-span-2">
+        <div class="md:col-span-2 col-span-1">
           <label for="sellerMessage" class="block text-sm font-medium text-gray-700">Pesan ke penjual</label>
           <textarea id="sellerMessage" name="sellerMessage" rows="3"
             class="resize-none mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2 focus:outline-none focus:ring-2 focus:ring-[#2DD8A3] focus:border-transparent transition duration-200"
             placeholder="Tambahkan pesan ke penjual (opsional)"></textarea>
         </div>
 
-        <h1 class="col-span-2 text-lg font-semibold mt-3">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
+        <h1 class="col-span-2 text-lg font-semibold mt-1">Total Belanja: <span class="text-[#2DD8A3]">Rp.100.000</span>
         </h1>
 
         <!-- Button Actions -->
         <div class="col-span-2 flex justify-between items-center mt-3">
-          <button type="submit"
-            class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
-            Pesan
-          </button>
           <button type="button"
             class="closeForm w-[48%] bg-gray-800 hover:bg-black hover:bg-red-700 duration-300 text-white font-bold py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
             Batal
           </button>
+
+          <button type="submit"
+            class="w-[48%] bg-[#2DD8A3] hover:bg-[#28c091] text-white font-bold duration-300 py-2.5 px-4 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">
+            Pesan
+          </button>
+          
         </div>
       </form>
     </div>
@@ -337,7 +343,7 @@
 
   <div class="w-full h-auto pt-12 flex justify-center items-center ">
     <div
-      class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-auto px-8 flex justify-between items-center p-6 rounded-lg shadow-sm bg-white overflow-x-auto">
+      class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-auto px-8 flex justify-between items-center p-6 rounded-lg shadow-sm bg-white overflow-x-auto custom-scrollbar">
 
       <div class="flex justify-start items-center w-[1000px] gap-x-4">
         <input type="checkbox" class="scale-150">
@@ -376,7 +382,7 @@
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
             <select
-              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+              class="border border-gray-300 text-gray-700 bg-white text-sm bg-white rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -420,7 +426,7 @@
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
             <select
-              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+              class="border border-gray-300 text-gray-700 text-sm bg-white rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -464,7 +470,7 @@
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
             <select
-              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+              class="border border-gray-300 text-gray-700 text-sm bg-white rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -508,7 +514,7 @@
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
             <select
-              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+              class="border border-gray-300 text-gray-700 text-sm rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Tablet</option>
               <option value="tablet">20 Tablet</option>
               <option value="tablet">30 Tablet</option>
@@ -552,7 +558,7 @@
           <div class="w-auto flex flex-col items-start justify-start gap-1 pr-4">
             <p class="text-sm font-medium text-gray-500 flex items-center justify-center">Variasi</p>
             <select
-              class="border border-gray-300 text-gray-700 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-1">
+              class="border border-gray-300 text-gray-700 text-sm rounded-md bg-white focus:ring-blue-500 focus:border-blue-500 block p-1">
               <option value="tablet">10 Sachet</option>
               <option value="tablet">20 Sachet</option>
               <option value="tablet">30 Sachet</option>
@@ -587,16 +593,16 @@
 
   <div class="w-full h-auto pb-12 flex justify-center items-center ">
     <div
-      class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-[60px] px-8 flex justify-between items-center p-10 rounded-lg shadow-sm bg-white transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 ">
+      class="w-full 2xl:w-[70%] xl:w-[80%] lg:w-[90%] h-[60px] lg:px-8 px-2 flex justify-between items-center p-10 rounded-lg shadow-sm bg-white transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-102 duration-300 ">
 
       <div class="flex justify-start items-center w-auto gap-x-4">
-        <p class="font-bold text-lg text-gray-600">Total Belanja :</p>
-        <p class="font-bold text-lg text-gray-800">Rp.300.000 </p>
+        <p class="font-bold lg:text-lg text-[13px] text-gray-600">Total Belanja :</p>
+        <p class="font-bold lg:text-lg text-[13px] text-gray-800">Rp.300.000 </p>
       </div>
 
-      <div class="flex justify-between items-center w-auto  gap-16">
+      <div class="flex justify-between items-center w-auto  pl-2 gap-16">
         <button
-          class="consultButton hijau border-none rounded-md shadow-sm py-3 px-6 font-semibold text-white duration-300 hover:bg-emerald-600">Checkout</button>
+          class="consultButton hijau border-none rounded-md shadow-sm lg:py-3 lg:px-6 px-4 py-2 font-semibold text-white duration-300 hover:bg-emerald-600 lg:text-base text-[12px]">Checkout</button>
 
       </div>
 
